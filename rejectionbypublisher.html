@@ -25,17 +25,6 @@ New Jersey
 <meta name="author" content="Eleanor Of Tenafly NJ non-partisan non-profit organization">
 <meta name="generator" content="freehand">
 <link rel="stylesheet" Type="text/css" href="eleanoroft-style.css">
-
-<script language="text/javascript">
-function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
-}
-</script>
 </head>
 
 
@@ -53,103 +42,55 @@ function updatemenu() {
 <div class=pgcontainer>
 <!-- -->
 
-<Center>
-
-<!-- table top -->
-<TABLE width=100% border=0 cellspacing="0" cellpadding="0" align="center" valign="top" bgcolor="#000000">
-<tr>
-<td align=center>
-
-<FONT class=tenafly000099VAHSbold12>
-</Font>
-<!-- -->
-</td>
-</tr>
-</Table>
-
-
 <div class="header-block">
-<div class="logo-row">
-<IMG src="eleanor-logo1-050725.jpg" border=0>
-<FONT class=tenafly000099VAHSbold12>
-</Font>
-<!-- -->
-</div>
 <div class="nav-row">
-<nav id='menu'>
-  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-  <ul>
-    <li><a href='http://'>Home</a></li>
-    <li><a class='dropdown-arrow' href='http://'>Petitions</a>
-      <ul class='sub-menus'>
-<li><a href='http://petitions.html'>Tenafly Borough Official #1</a></li>
-<li><a href='evidencehome.html'>Evidence Page</a></li>
-<li><a href='evidence-10-4-2023.html'>Sample: 10-4-2023</a></li>
-<!--<li><a href='http://'>Products 4</a></li>-->
-      </ul>
-
-</li>
-
-<li><a class='dropdown-arrow' href='http://'>Obituary Info</a>
-   <ul class='sub-menus'>
-       <li><a href='rejectedobituary.html'>Rejected Obituary</a></li>
-       <li><a href='publisherrejection.html'>Publisher Rejection Letter</a></li>
-       <li><a href='publishedobituary.html'>Published Obituary</a></li>
-   </ul>
-
-</li>
-<!--    <li><a class='dropdown-arrow' href='http://'>Other</a>-->
-<!--      <ul class='sub-menus'>-->
-<!--        <li><a href='#councilmeetingreview'>Mayor Council Meetings Commentary</a></li>-->
-<!--        <li><a href='#tflyboardofedmeeting'>Board Of Education Meetings Commentary</a></li>-->
-<!--        <li><a href='#excessexamples'>Municipal Excess</a></li>-->
-<!--        <li><a href='#contactus'>Contact Us</a></li>-->
-<!--      </ul>-->
-<!--    </li>-->
-<!-- Any more menu items Will not display properly in blue box due: not enough room -->
-<!-- -->
-<!--
-<li><a href='#contactus'>Contact Us</a></li>
-      <ul class='sub-menus'>
-        <li><a href='#contactus'>Contact via #1</a></li>
-      </ul>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="logo">
+      <a href="index.html#home" aria-label="Go to Home">
+        <img src="eleanor-logo1-050725.jpg" alt="Eleanor of Tenafly NJ">
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <!-- Menu links -->
+      <li><a href="index.html#home"><span class="nav-label">Home</span></a></li>
+      <li class="has-sub">
+        <a href="#petitions"><span class="nav-label">Petitions</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
+        <ul class="nav-sub">
+          <li><a href="petitions.html#official1"><span class="nav-label">Tenafly Borough Official #1</span></a></li>
+          <li><a href="petitions.html#official2"><span class="nav-label">Tenafly Borough Official #2</span></a></li>
+          <li><a href="petitions.html#official3"><span class="nav-label">Tenafly Borough Official #3</span></a></li>
+        </ul>
       </li>
--->
-<!--
-    <li><a href='#contactus'>Test Item</a></li>
-      <ul class='sub-menus'>
-        <li><a href='#contactus'>Contact via #1</a></li>
-      </ul>
-  </ul>
--->
-
+      <li class="has-sub">
+        <a href="#obituary"><span class="nav-label">Obituary Info</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
+        <ul class="nav-sub">
+          <li><a href="rejectedobituary.html">Rejected Obituary</a></li>
+          <li><a href="rejectionbypublisher.html">Publisher Rejection Letter</a></li>
+          <li><a href="publishedobituary.html">Published Obituary</a></li>
+        </ul>
+      </li>
+      <li><a href="#donations"><span class="nav-label">Donations</span></a></li>
+      <li><a href="#contact"><span class="nav-label">Contact</span></a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
-} -->
-
-
-<FONT class=tenafly000099VAHSbold12>
-</Font>
-<!-- -->
-
-
 </div>
 </div>
+
+<Center>
 
 <!-- Image Row Table -->
 <!-- Top Table For Same Page Links -->
 <!--  -->
-<Table class=prodpgtblwidths bgcolor="#FFFFFF" WIDTH="100%" border="0" cellspacing="0" cellpadding="1" align="center" valign="top">
-<tr><a name=TopOfPg></a>
-<td height="1" colspan="7"></td></tr>
-
+<a name=TopOfPg></a>
+<Table class=prodpgtblwidths bgcolor="#f5e4ec" WIDTH="100%" border="0" cellspacing="0" cellpadding="1" align="center" valign="top">
 
         <TR>
           <TD vAlign=top align=middle width="13%" bgColor="">
@@ -672,7 +613,7 @@ Please let us know how the family would like to proceed.<br>
 Respectfully,<br>
 <br>
 Kristine Feldmann<br>
-Sales Manager � Obituaries l PERM/Immigration Notices<br>
+Sales Manager  Obituaries l PERM/Immigration Notices<br>
 kfeldmann@gannett.com<br>
 Office: 866-299-2977<br>
 <br>
@@ -1134,6 +1075,197 @@ Evidence documentation: Coming Soon!<br>
 <!-- End pgcontainer -->
 </div>
 <!-- -->
+
+<script>
+// Toggle slide-in menu and hamburger → X
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = navLinks ? navLinks.querySelectorAll('a') : [];
+const plusButtons = navLinks ? navLinks.querySelectorAll('.nav-plus') : [];
+const innerPlusButtons = navLinks ? navLinks.querySelectorAll('.nav-sub .nav-plus') : [];
+const hoverSubs = navLinks ? navLinks.querySelectorAll('.has-sub') : [];
+const hoverTimers = new WeakMap();
+const desktopMedia = window.matchMedia('(min-width: 1025px)');
+const mobileMedia = window.matchMedia('(max-width: 1024px)');
+// HC - Mobile submenu height controller to avoid lingering open panels
+const setMobileSubState = (item, isOpen) => {
+  if (!item) return;
+  const sub = item.querySelector(':scope > .nav-sub');
+  if (!sub) return;
+  sub.style.maxHeight = isOpen ? `${sub.scrollHeight}px` : '0px';
+  sub.style.opacity = isOpen ? '1' : '0';
+  sub.style.visibility = isOpen ? 'visible' : 'hidden';
+  sub.style.pointerEvents = isOpen ? 'auto' : 'none';
+};
+
+let menuOpenedAt = 0;
+
+const closeMenu = () => {
+  const wasActive = navLinks.classList.contains('active');
+  if (wasActive) {
+    navLinks.classList.add('closing');
+  } else {
+    navLinks.classList.remove('closing');
+  }
+  navLinks.classList.remove('active');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('.has-sub.open').forEach((item) => {
+    item.classList.remove('open');
+  });
+  document.querySelectorAll('.has-sub.mobile-open').forEach((item) => {
+    item.classList.remove('mobile-open');
+    setMobileSubState(item, false);
+  });
+  if (wasActive) {
+    setTimeout(() => navLinks.classList.remove('closing'), 320);
+  }
+};
+
+const setActiveLink = () => {
+  const currentHash = window.location.hash || '#home';
+  links.forEach((link) => {
+    const href = link.getAttribute('href');
+    const isActive = href === currentHash || (!window.location.hash && href === '#home');
+    link.classList.toggle('active', isActive);
+  });
+};
+
+const toggleMenu = () => {
+  const isOpen = navLinks.classList.contains('active');
+  if (isOpen) {
+    closeMenu();
+    return;
+  }
+  navLinks.classList.add('active');
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  menuOpenedAt = Date.now();
+  setActiveLink();
+};
+
+hamburger.addEventListener('click', toggleMenu);
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    const justOpened = Date.now() - menuOpenedAt < 350;
+    if (navLinks.classList.contains('active') && !justOpened) {
+      toggleMenu();
+    }
+    setActiveLink();
+  });
+});
+
+window.addEventListener('resize', () => {
+  closeMenu();
+  document.querySelectorAll('.has-sub.open').forEach((item) => {
+    item.classList.remove('open');
+  });
+  document.querySelectorAll('.has-sub.mobile-open').forEach((item) => {
+    item.classList.remove('mobile-open');
+    setMobileSubState(item, false);
+  });
+  document.querySelectorAll('.nav-sub').forEach((sub) => {
+    sub.style.maxHeight = '';
+    sub.style.opacity = '';
+    sub.style.visibility = '';
+    sub.style.pointerEvents = '';
+  });
+});
+
+desktopMedia.addEventListener('change', (e) => {
+  if (e.matches) {
+    closeMenu();
+  }
+});
+mobileMedia.addEventListener('change', (e) => {
+  if (!e.matches) {
+    document.querySelectorAll('.has-sub.mobile-open, .has-sub.open').forEach((item) => {
+      item.classList.remove('mobile-open', 'open');
+      setMobileSubState(item, false);
+    });
+  }
+});
+
+window.addEventListener('hashchange', setActiveLink);
+setActiveLink();
+
+plusButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!mobileMedia.matches || !navLinks.classList.contains('active')) return;
+    const parent = btn.closest('.has-sub');
+    if (parent) {
+      const willOpen = !parent.classList.contains('mobile-open');
+      parent.classList.toggle('mobile-open', willOpen);
+      setMobileSubState(parent, willOpen);
+    }
+  });
+});
+
+innerPlusButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!mobileMedia.matches || !navLinks.classList.contains('active')) return;
+    const parent = btn.closest('.has-sub');
+    if (parent) {
+      const willOpen = !parent.classList.contains('mobile-open');
+      parent.classList.toggle('mobile-open', willOpen);
+      setMobileSubState(parent, willOpen);
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  const isClickInside = navLinks.contains(e.target) || hamburger.contains(e.target);
+  if (!isClickInside && navLinks.classList.contains('active')) {
+    closeMenu();
+  }
+});
+
+hoverSubs.forEach((item) => {
+  const sub = item.querySelector(':scope > .nav-sub');
+
+  const clearHoverTimer = () => {
+    const t = hoverTimers.get(item);
+    if (t) clearTimeout(t);
+  };
+  const closeHover = () => {
+    clearHoverTimer();
+    item.classList.remove('hover-open');
+  };
+  const closeHoverDelayed = () => {
+    clearHoverTimer();
+    const t = setTimeout(() => closeHover(), 1000);
+    hoverTimers.set(item, t);
+  };
+
+  item.addEventListener('mouseenter', () => {
+    clearHoverTimer();
+    hoverSubs.forEach((other) => {
+      if (other !== item) other.classList.remove('hover-open');
+    });
+    item.classList.add('hover-open');
+  });
+
+  item.addEventListener('mouseleave', (e) => {
+    if (sub && sub.contains(e.relatedTarget)) return;
+    closeHoverDelayed();
+  });
+
+  if (sub) {
+    sub.addEventListener('mouseenter', () => {
+      clearHoverTimer();
+    });
+    sub.addEventListener('mouseleave', (e) => {
+      if (item.contains(e.relatedTarget)) return;
+      closeHoverDelayed();
+    });
+  }
+});
+
+</script>
 
 </BODY>
 </HTML>
