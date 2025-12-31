@@ -14,12 +14,31 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #f5e4ec; /* darker blush backdrop to complement the nav */
+	color: #000033; /* default text color across the site */
 }
+
+/* Force all text to the primary navy except explicitly red content */
+body * {
+	color: #000033 !important;
+}
+
+/* Preserve designated red text */
+body [style*="#FF0000"],
+body [color="#FF0000"],
+.homelandshadow1,
+.homelandshadow2,
+.homelandtest,
+.heading020123,
+.introblock,
+.ourcomment {
+	color: #FF0000 !important;
+}
+
 
 /* New responsive navigation */
 .site-nav {
-	/* Slightly deeper Inter Miami-inspired palette */
-	background: #f3a9c0; /* deeper pastel pink */
+	/* Match footer navy */
+	background: #000033;
 	color: #0a0a0a;
 	position: relative;
 	z-index: 10; /* Keep nav above page content */
@@ -72,6 +91,7 @@ body {
 	align-items: center;
 	gap: 15px;
 }
+/* ToDo: Change to White ffffff ? */
 .site-nav .nav-links a:hover {
 	color: #b0205f; /* deeper pink/purple hover */
 }
@@ -85,7 +105,8 @@ body {
 	width: 28px;
 	height: 28px;
 	border-radius: 50%;
-	border: 2px solid #0a0a0a;
+	/* HC - Lighter control to match navy mobile panel */
+	border: 2px solid #f2f2f2;
 	font-size: 14px;
 	line-height: 1;
 	font-weight: 600;
@@ -115,12 +136,13 @@ body {
 			position: absolute;
 			top: 100%;
 			left: 50%;
-			background: #f7d6e3;
+			/* HC - Lighter navy submenu to complement top nav */
+			background: #1a1f5a;
 			list-style: none;
 			padding: 0.5rem 0;
 			margin: 2px 0 0 0;
 			min-width: 320px;
-			border: 1px solid #e8a7c0;
+			border: 1px solid #2f356e;
 			border-radius: 10px;
 			box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 			transform: translate(-50%, 2px);
@@ -153,18 +175,28 @@ body {
 .site-nav .nav-sub .nav-plus {
 	display: none;
 }
+/* HC - Center submenu links precisely for desktop */
 .site-nav .nav-sub a {
-	display: inline-flex;
-	align-items: center;
-	gap: 15px;
+	display: block;
 	padding: 0.5rem 1rem;
+	/* HC - Keep submenu width stable so centering is accurate */
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
 	font-size: 18px;
 	font-weight: 600;
 	text-decoration: none;
 	color: #0a0a0a;
 }
+/* ToDo: Change to White ffffff ? */
 .site-nav .nav-sub a:hover {
 	color: #b0205f;
+}
+.site-nav .nav-sub .nav-label {
+	/* HC - Center submenu label text even when nav-label defaults to left */
+	flex: 0 1 auto;
+	text-align: center;
+	width: auto;
 }
 		.site-nav .has-sub.hover-open > .nav-sub {
 			opacity: 1;
@@ -215,7 +247,7 @@ body {
 	display: block;
 	height: 4px;
 	width: 30px;
-	background: #000000;
+	background: #f2f2f2;
 	border-radius: 4px;
 	transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -225,9 +257,10 @@ body {
 		top: 0;
 		right: 0;
 		height: 100vh;
-		width: 70%;
-		max-width: 320px;
-		background: #f7c9da; /* slightly deeper pink for panel */
+		width: 80%;
+		max-width: 380px;
+		/* HC - Mobile slide-in panel matches submenu color */
+		background: #1a1f5a;
 		flex-direction: column;
 		padding: 5rem 1.5rem;
 		gap: 1rem;
@@ -273,6 +306,13 @@ body {
 				text-align: left;
 				width: 100%;
 			}
+			.site-nav .nav-sub .nav-label {
+				/* HC - Re-center submenu labels overridden by mobile nav-label rule */
+				flex: 0 1 auto;
+				text-align: center;
+				width: auto;
+			}
+/* ToDo: Change to White ffffff ? */
 	.site-nav .nav-links a:hover {
 		color: #b0205f;
 	}
@@ -292,7 +332,8 @@ body {
 				visibility: hidden;
 				pointer-events: none;
 				transform: none !important;
-				background: transparent;
+				/* HC - Mobile submenu matches desktop dropdown color */
+				background: #1a1f5a;
 				box-shadow: none;
 				border: none;
 				padding: 0;
@@ -349,12 +390,14 @@ body {
 					transform: none;
 					margin-top: 0.25rem;
 				}
+		/* HC - Menu circle button (+) base styling */
 		.site-nav .nav-sub .nav-plus {
 			display: inline-flex;
 		width: 24px;
 		height: 24px;
 		border-radius: 50%;
-		border: 2px solid #0a0a0a;
+		/* HC - Lighter control to match navy mobile panel */
+		border: 2px solid #f2f2f2;
 		font-size: 12px;
 		line-height: 1;
 		font-weight: 600;
@@ -365,11 +408,13 @@ body {
 		top: 50%;
 		transform: translateY(-50%);
 	}
+/* ToDo: Change to White ffffff ? */
+		/* HC - Menu circle button switches to x when submenu is open */
 		.site-nav .has-sub.has-sub-inner.mobile-open > a .nav-plus {
 			transform: translateY(-50%) rotate(45deg);
-			background: #b0205f;
-			color: #ffffff;
-			border-color: #b0205f;
+			background: #f2f2f2;
+			color: #1a1f5a;
+			border-color: #f2f2f2;
 		}
 			.site-nav .nav-links.active {
 				transform: translateX(0);
@@ -393,6 +438,7 @@ body {
 				max-height: 0;
 				margin-top: 0;
 			}
+/* ToDo: Change to White ffffff ? */
 				.site-nav .has-sub.mobile-open > a .nav-plus {
 					transform: translateY(-50%) rotate(45deg);
 					background: #b0205f;
@@ -540,6 +586,588 @@ body {
 }
 
 /* End Menu css */
+
+
+/* Bottom Footer Nav Bar   */
+/* from above: New responsive navigation */
+.footer-nav {
+	/* footer with background of Web Safe Navy Blue #000033 */
+	background: #000033; /* was darker pink color */
+	color: #FFCCCC;
+	position: relative;
+	z-index: 10; /* Keep nav above page content */
+	/* Force full-viewport width even when placed inside centered wrappers */
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+/* HC - Force light text in top nav to match footer */
+.site-nav,
+.site-nav * {
+	color: #f2f2f2 !important;
+}
+/* HC - Force light white footer text to override global body color */
+.footer-nav,
+.footer-nav * {
+	color: #f2f2f2 !important;
+}
+.footer-nav .foot-nav-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	padding: 1.5rem 1.5rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.footer-nav .footer-brand {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.2rem;
+	text-align: center;
+}
+.footer-nav .footer-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: #fbe6ee;
+	letter-spacing: 0.02em;
+}
+.footer-nav .footer-subtitle {
+	font-size: 14px;
+	font-weight: 500;
+	color: #f1c9da;
+}
+.footer-nav .logo {
+	display: flex;
+	align-items: center;
+}
+.footer-nav .logo a {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+/* No logo in Footer */
+/*
+.footer-nav .logo img {
+	/* Enlarged logo */
+	height: 96px; /* Taller/wider for emphasis */
+	width: auto;
+	display: block;
+}
+*/
+
+.footer-nav .nav-links {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.25rem;
+	column-gap: 3.25rem; /* extra spacing between top-level items */
+	margin: 0;
+	padding: 0;
+}
+.footer-nav .nav-links li {
+	list-style: none;
+	position: relative;
+}
+.footer-nav .nav-links a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 18px;
+	transition: color 0.2s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+}
+/* ToDo: Change to White ffffff ? */
+.footer-nav .nav-links a:hover {
+	color: #b0205f; /* deeper pink/purple hover */
+}
+.footer-nav .nav-links .nav-caret {
+	font-size: 0.75em;
+	line-height: 1;
+	transition: transform 0.2s ease;
+}
+/* What for? */
+.footer-nav .nav-plus {
+	display: none; /* Hidden on desktop; shown on mobile */
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	border: 2px solid #0a0a0a;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.footer-nav .nav-links a.active {
+	text-decoration: none;
+}
+.footer-nav .nav-links a.active .nav-caret {
+	text-decoration: none;
+}
+	@media (min-width: 1025px) {
+		.footer-nav .has-sub.mobile-open > .nav-sub {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transform: translate(-50%, 6px);
+			max-height: none;
+	}
+}
+/* Bottom Footer Nav Bar   */
+
+/* More Bottom Footer Nav Bar   */
+		.site-nav .nav-sub {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			/* HC - Lighter navy submenu to complement top nav */
+			background: #1a1f5a;
+			list-style: none;
+			padding: 0.5rem 0;
+			margin: 2px 0 0 0;
+			min-width: 320px;
+			border: 1px solid #2f356e;
+			border-radius: 10px;
+			box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+			transform: translate(-50%, 2px);
+			transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+		}
+.site-nav .nav-sub li {
+	width: 100%;
+}
+.site-nav .nav-sub .nav-sub-inner {
+	list-style: none;
+	margin: 0.25rem 0 0 0.5rem;
+	padding: 0.25rem 0 0 0;
+	display: none;
+	position: static;
+	background: transparent;
+	min-width: auto;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0.4rem 0;
+}
+.site-nav .nav-sub .nav-sub-inner li {
+	margin: 0.1rem 0;
+}
+.site-nav .nav-sub .nav-sub-inner a {
+	padding: 0.35rem 0.75rem;
+	font-size: 16px;
+	font-weight: 600;
+}
+.site-nav .nav-sub .nav-plus {
+	display: none;
+}
+.site-nav .nav-sub a {
+	/* HC - Center submenu links (override later duplicate rule) */
+	display: block;
+	padding: 0.5rem 1rem;
+	/* HC - Keep submenu width stable so centering is accurate */
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #0a0a0a;
+}
+/* ToDo: Change to White ffffff ? */
+.site-nav .nav-sub a:hover {
+	color: #b0205f;
+}
+		.site-nav .has-sub.hover-open > .nav-sub {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: translate(-50%, 2px);
+		}
+		.site-nav .has-sub:hover > .nav-sub {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: translate(-50%, 0);
+		}
+.site-nav .has-sub:hover > a .nav-caret {
+	transform: rotate(180deg);
+}
+.site-nav .has-sub.hover-open > a .nav-caret {
+	transform: rotate(180deg);
+}
+.site-nav .nav-sub .has-sub:hover > .nav-sub-inner,
+.site-nav .nav-sub .has-sub.hover-open > .nav-sub-inner {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+.site-nav .nav-links .nav-caret {
+	font-size: 0.75em;
+	line-height: 1;
+}
+.site-nav .hamburger {
+	/* Hamburger button; hidden on desktop */
+	display: none;
+	flex-direction: column;
+	gap: 6px;
+	cursor: pointer;
+	width: 30px;
+	background: transparent;
+	border: none;
+	padding: 0;
+	position: relative;
+	z-index: 11; /* Ensure hamburger stays above sliding panel */
+}
+.site-nav .hamburger {
+	/* Prevents double margin collapse if styled elsewhere */
+}
+.site-nav .hamburger span {
+	/* The three bars of the hamburger */
+	display: block;
+	height: 4px;
+	width: 30px;
+	background: #f2f2f2;
+	border-radius: 4px;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 1024px) {
+	.site-nav .nav-links {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 80%;
+		max-width: 380px;
+		/* HC - Mobile slide-in panel matches submenu color */
+		background: #1a1f5a;
+		flex-direction: column;
+		padding: 5rem 1.5rem;
+		gap: 1rem;
+		/* Slide in from the right on mobile */
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out, opacity 0.2s ease;
+		/* Hide and disable clicks by default to avoid flashing on resize */
+		visibility: hidden;
+		pointer-events: none;
+		align-items: stretch;
+	}
+	.site-nav .nav-links li {
+		width: 100%;
+	}
+	.site-nav .nav-links li:first-child {
+		margin-top: 1rem; /* spacing above Home */
+	}
+			.site-nav .nav-links a {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				width: 100%;
+				text-align: left;
+				padding: 0.75rem 2rem 0.75rem 0.75rem;
+				overflow: visible;
+			}
+	.site-nav .nav-caret {
+		display: none;
+	}
+		.site-nav .nav-plus {
+			display: inline-flex !important;
+			position: absolute;
+			right: 2.6rem;
+			top: 50%;
+			transform: translateY(-50%);
+			background: transparent;
+			color: #0a0a0a;
+			z-index: 2;
+		}
+			.site-nav .nav-links .nav-label {
+				flex: 1;
+				text-align: left;
+				width: 100%;
+			}
+/* ToDo: Change to White ffffff ? */
+	.site-nav .nav-links a:hover {
+		color: #b0205f;
+	}
+			.site-nav .nav-links.closing .nav-sub {
+				transition: max-height 0.28s ease, opacity 0.2s ease;
+				max-height: 0;
+				opacity: 0;
+			}
+			.site-nav .nav-sub {
+				position: static !important;
+				display: block;
+				width: 100%;
+				min-width: 100%;
+				left: auto !important;
+				right: auto !important;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transform: none !important;
+				/* HC - Mobile submenu matches desktop dropdown color */
+				background: #1a1f5a;
+				box-shadow: none;
+				border: none;
+				padding: 0;
+				margin: 0.25rem 0 0 0;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.28s ease, opacity 0.2s ease;
+			}
+			/* HC - Ensure closed mobile items stay hidden even if menu was open */
+			.site-nav .has-sub:not(.mobile-open) > .nav-sub {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transform: none !important;
+				max-height: 0;
+			}
+	.site-nav .nav-sub li {
+		padding-left: 0;
+		border-left: none;
+		margin: 0.2rem 0;
+		text-align: center;
+	}
+		.site-nav .nav-sub a {
+			display: block;
+			width: 100%;
+			padding: 0.4rem 0.5rem;
+			text-align: center;
+		}
+			.site-nav .nav-sub .nav-sub-inner {
+				margin: 0;
+				padding: 0;
+				position: static !important;
+				display: block;
+				width: 100%;
+				max-height: 0;
+				opacity: 0;
+				visibility: hidden;
+				overflow: hidden;
+				transform: none !important;
+				transition: max-height 0.28s ease, opacity 0.2s ease;
+				background: transparent;
+				border: none;
+				box-shadow: none;
+				min-width: auto;
+			}
+	.site-nav .nav-sub .nav-sub-inner a {
+		text-align: center;
+	}
+				.site-nav .nav-sub .has-sub.mobile-open > .nav-sub-inner {
+					display: block;
+					max-height: 500px;
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					margin-top: 0.25rem;
+				}
+		.site-nav .nav-sub .nav-plus {
+			display: inline-flex;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		border: 2px solid #0a0a0a;
+		font-size: 12px;
+		line-height: 1;
+		font-weight: 600;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+/* ToDo: Change to White ffffff ? */
+		.site-nav .has-sub.has-sub-inner.mobile-open > a .nav-plus {
+			transform: translateY(-50%) rotate(45deg);
+			background: #b0205f;
+			color: #ffffff;
+			border-color: #b0205f;
+		}
+			.site-nav .nav-links.active {
+				transform: translateX(0);
+				visibility: visible;
+				pointer-events: auto;
+				opacity: 1;
+			}
+			.site-nav .nav-links.closing {
+				transform: translateX(100%);
+				visibility: visible;
+				pointer-events: none;
+				opacity: 1;
+			}
+			.site-nav .nav-links:not(.active) {
+				opacity: 0.99; /* ensure transition triggers */
+			}
+			.site-nav .nav-links:not(.active) .nav-sub {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				max-height: 0;
+				margin-top: 0;
+			}
+/* ToDo: Change to White ffffff ? */
+				.site-nav .has-sub.mobile-open > a .nav-plus {
+					transform: translateY(-50%) rotate(45deg);
+					background: #b0205f;
+					color: #ffffff;
+					border-color: #b0205f;
+		}
+	.site-nav .hamburger {
+		display: flex;
+	}
+			.site-nav .has-sub.mobile-open > .nav-sub {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				transform: none;
+				max-height: 400px; /* large enough to show all subitems */
+			margin-top: 0.25rem;
+			padding-top: 0;
+		}
+}
+.site-nav .hamburger.active span:nth-child(1) {
+	/* Rotate top bar into the X */
+	transform: translateY(10px) rotate(45deg);
+}
+.site-nav .hamburger.active span:nth-child(2) {
+	/* Hide middle bar */
+	opacity: 0;
+}
+.site-nav .hamburger.active span:nth-child(3) {
+	/* Rotate bottom bar into the X */
+	transform: translateY(-10px) rotate(-45deg);
+}
+
+#menu {
+	background: #333333;
+	color: #FFF;
+	width: 100%;
+	box-sizing: border-box;
+/* height: 45px;  */
+	height: 45px;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 2px;
+}
+/* Header layout wrappers for full-width nav */
+.header-block { width: 100%; margin: 0 auto; }
+.logo-row { text-align: center; }
+.nav-row { width: 100%; margin: 0 auto; }
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+/*   */
+
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+/*  hover was 0099CC */
+/*  hover was 000099 */
+#menu li a:hover {
+	color: #000000;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+/*  */
+/*  */
+/*  */
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+/*  */
+/*  */
+/*  */
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 300px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+/* End Menu css */
+/* End Menu css */
+@media screen and (max-width: 800px){
+	#menu {position:relative;}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:grey}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+/* End Footer Menu css */
+/* More Bottom Footer Nav Bar   */
+
 
 
 .midframelink {
@@ -708,6 +1336,9 @@ COLOR="#000099";
 }
 .homelandneed {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 }
+.homelandasterisk {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FFFFFF; Text-Decoration: none;
+}
+
 
 /*  text-shadow: 0px 0px 0px rgba(0,0,0,0.6); */
 /*  Text-Decoration: underline; */
@@ -733,7 +1364,7 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Arial, Helvetica, Sans Serif;  
 
 
 /* Used with eleanoroftenafly.com */
-.homepgparatop {FONT-SIZE: 33px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #000000; text-shadow: 2px 2px 2px rgba(0,0,0,0.6); Text-Decoration: none;
+.homepgparatop {FONT-SIZE: 33px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #000033; text-shadow: 2px 2px 2px rgba(0,0,0,0.6); Text-Decoration: none;
 }
 /* Used with Tenafly Landing Homepage Top */
 /* red is FF0000  */
@@ -810,6 +1441,12 @@ COLOR: #000000;
 /* max-width: 780px; */
 .5colempty {width: 100%; max-width: 100%; 
 }
+/* Table below white text box on homepage */
+/*  background-color: #f5e4ec; */
+.fillerbelowwhitebox {width: 100%; max-width: 100%;
+}
+
+/* max-width: 780px; */
 
 /* Used with Eleanor Of Tenafly website  */
 /* Website URL Name and GoTo top link  */
@@ -820,7 +1457,7 @@ COLOR: #000000;
 .urltableandgototop {padding: 10px; width: 100%; max-width: 100%;
 }
 /*  White is #FFFFFF Black is #000000 */
-.blankbottom {padding: 10px; width: 100%; max-width: 100%; background-color: #FFFFFF;
+.blankbottom {padding: 10px; width: 100%; max-width: 100%; background-color: #f5e4ec;
 }
 
 
