@@ -284,9 +284,7 @@ New Jersey
 </Table>
 <!-- end table for rule -->
 
-<span class="homelandneed"></span><br>
-<span class="homelandasterisk">*</span>
-<br>
+<span class="homelandneed"></span><br><br>
 <span class="homelandneed">&nbsp;Petition</span>
 <br>
 &nbsp;
@@ -294,10 +292,7 @@ New Jersey
 <br>
 &nbsp;
 <span class="homelandneed">Prosecute!</span><br>
-<br>
-<span class="homelandasterisk">*</span>
-
-<!-- table for rule -->
+<br><!-- table for rule -->
 <TABLE width=100% border=0 cellspacing="0" cellpadding="0" align="center" valign="top" bgcolor="#000000">
 <tr>
 <td align=center>
@@ -374,18 +369,28 @@ They operate under a veil of immunity!<br>
 </td>
 </tr>
 </Table>
-<!-- end table for rule -->
-
-<span class="homelandasterisk">*</span>
-<br>
+<!-- end table for rule --><br>
 <span class="homelandneed">
-Join us!<br>
-and<br>
-Sign the Petition!<br>
-<br>
-<span class="homelandasterisk">*</span>
-<br>
-<br>
+  <!-- HC - Petition CTA button toggles the form -->
+  <button class="petition-cta" type="button" aria-expanded="false" aria-controls="petition-form">Join us! and Sign the Petition!</button>
+  <div class="petition-form" id="petition-form" hidden>
+    <form class="petition-form-inner" action="#" method="post">
+      <label class="petition-field">
+        <span class="petition-label">Full Name</span>
+        <input type="text" name="full_name" required>
+      </label>
+      <label class="petition-field">
+        <span class="petition-label">Email</span>
+        <input type="email" name="email" required>
+      </label>
+      <label class="petition-field">
+        <span class="petition-label">Message</span>
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <button class="petition-submit" type="submit">Submit</button>
+    </form>
+  </div><br>
+  <br>
 </span>
 </td>
 
@@ -1130,8 +1135,10 @@ Associate of The Borough Of Tenafly NJ<br>
 <nav class="footer-nav" aria-label="Footer navigation">
   <div class="foot-nav-inner">
     <div class="footer-brand">
-      <span class="footer-title">Eleanor of Tenafly NJ</span>
-          </div>
+      <a href="index.html" aria-label="Go to Home">
+        <img class="footer-logo" src="http://eleanoroftenaflynj.com/eleanor-logo-bernhard-000033-121625.jpg" alt="Eleanor of Tenafly NJ">
+      </a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html"><span class="nav-label">Home</span></a></li>
       <li><a href="boroughofficials.html"><span class="nav-label">Petition To Prosecute</span></a></li>

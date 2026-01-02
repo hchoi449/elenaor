@@ -212,4 +212,22 @@ hoverSubs.forEach((item) => {
     });
   }
 });
+
+// HC - Toggle petition CTA form visibility
+const petitionButtons = document.querySelectorAll('.petition-cta');
+petitionButtons.forEach((btn) => {
+  const panelId = btn.getAttribute('aria-controls');
+  if (!panelId) return;
+  const panel = document.getElementById(panelId);
+  if (!panel) return;
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    panel.hidden = isOpen;
+    if (!isOpen) {
+      const firstField = panel.querySelector('input, textarea, select');
+      if (firstField) firstField.focus();
+    }
+  });
+});
 }

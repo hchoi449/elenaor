@@ -34,6 +34,79 @@ body [color="#FF0000"],
 	color: #FF0000 !important;
 }
 
+/* HC - Petition CTA button and form styling */
+.petition-cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.6rem 1.5rem;
+	border-radius: 999px;
+	border: 2px solid #2f356e;
+	background: #1a1f5a;
+	color: #f2f2f2 !important;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.petition-cta:hover {
+	background: #242a6b;
+	box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+	transform: translateY(-1px);
+}
+.petition-form {
+	margin: 1rem auto 0;
+	padding: 1rem 1.25rem;
+	max-width: 420px;
+	background: #1f255f;
+	border: 1px solid #2f356e;
+	border-radius: 16px;
+	box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+.petition-form-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+.petition-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	text-align: left;
+}
+.petition-label {
+	font-size: 14px;
+	font-weight: 600;
+	color: #f2f2f2 !important;
+	text-shadow: none;
+}
+.petition-form input,
+.petition-form textarea {
+	border: 1px solid #3a3f7a;
+	border-radius: 10px;
+	padding: 0.5rem 0.75rem;
+	font-size: 16px;
+	color: #000033;
+	background: #f5e4ec;
+}
+.petition-submit {
+	align-self: center;
+	padding: 0.5rem 1.5rem;
+	border-radius: 999px;
+	border: none;
+	background: #b0205f;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.petition-submit:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+
 
 /* New responsive navigation */
 .site-nav {
@@ -170,7 +243,7 @@ body [color="#FF0000"],
 .site-nav .nav-sub .nav-sub-inner a {
 	padding: 0.35rem 0.75rem;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 }
 .site-nav .nav-sub .nav-plus {
 	display: none;
@@ -184,7 +257,7 @@ body [color="#FF0000"],
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 	text-decoration: none;
 	color: #0a0a0a;
 }
@@ -628,6 +701,11 @@ body [color="#FF0000"],
 	gap: 0.2rem;
 	text-align: center;
 }
+.footer-nav .footer-logo {
+	height: 64px;
+	width: auto;
+	display: block;
+}
 .footer-nav .footer-title {
 	font-size: 20px;
 	font-weight: 700;
@@ -765,7 +843,7 @@ body [color="#FF0000"],
 .site-nav .nav-sub .nav-sub-inner a {
 	padding: 0.35rem 0.75rem;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 }
 .site-nav .nav-sub .nav-plus {
 	display: none;
@@ -779,7 +857,7 @@ body [color="#FF0000"],
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 	text-decoration: none;
 	color: #0a0a0a;
 }
