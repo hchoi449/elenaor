@@ -220,14 +220,35 @@ petitionButtons.forEach((btn) => {
   if (!panelId) return;
   const panel = document.getElementById(panelId);
   if (!panel) return;
+  const closeBtn = panel.querySelector('.petition-close');
+  const closePanel = () => {
+    btn.setAttribute('aria-expanded', 'false');
+    panel.hidden = true;
+    panel.classList.remove('is-open');
+    document.body.classList.remove('petition-open');
+  };
   btn.addEventListener('click', () => {
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!isOpen));
     panel.hidden = isOpen;
+    panel.classList.toggle('is-open', !isOpen);
+    document.body.classList.toggle('petition-open', !isOpen);
     if (!isOpen) {
       const firstField = panel.querySelector('input, textarea, select');
       if (firstField) firstField.focus();
     }
+  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closePanel);
+  }
+  document.addEventListener('click', (e) => {
+    if (panel.hidden) return;
+    const clickedInside = panel.contains(e.target) || btn.contains(e.target);
+    if (!clickedInside) closePanel();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (panel.hidden) return;
+    if (e.key === 'Escape') closePanel();
   });
 });
 }
