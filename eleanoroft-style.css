@@ -6,6 +6,7 @@
 /* "".html */
 
 
+
 /* Begin Menu css */
 /* from cssportal.com using 800px breakpoint for viewport toggle */
 
@@ -15,17 +16,6 @@ body {
 	padding: 0;
 	background: #f5e4ec; /* darker blush backdrop to complement the nav */
 	color: #000033; /* default text color across the site */
-}
-/* HC - Backdrop for modal petition form */
-body.petition-open {
-	overflow: hidden;
-}
-body.petition-open::before {
-	content: "";
-	position: fixed;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.45);
-	z-index: 999;
 }
 
 /* Force all text to the primary navy except explicitly red content */
@@ -45,131 +35,17 @@ body [color="#FF0000"],
 	color: #FF0000 !important;
 }
 
-/* HC - Petition CTA button and form styling */
-.petition-cta {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.6rem 1.5rem;
-	border-radius: 999px;
-	border: 2px solid #2f356e;
-	background: #1a1f5a;
-	color: #f2f2f2 !important;
-	font-size: 18px;
-	font-weight: 600;
-	letter-spacing: 0.01em;
-	cursor: pointer;
-	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-.petition-cta:hover {
-	background: #242a6b;
-	box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
-	transform: translateY(-1px);
-}
-.petition-form {
-	margin: 1rem auto 0;
-	padding: 1.75rem 1.5rem 1.5rem;
-	max-width: 420px;
-	background: #1f255f;
-	border: 1px solid #2f356e;
-	border-radius: 16px;
-	box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-}
-.petition-title {
-	margin: 0 0 1rem 0;
-	text-align: center;
-	font-size: 18px;
-	font-weight: 700;
-	letter-spacing: 0.02em;
-	color: #f2f2f2 !important;
-	text-shadow: none;
-}
-.petition-form.is-open {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1000;
-	margin: 0;
-	width: min(90vw, 420px);
-}
-.petition-close {
-	position: absolute;
-	top: 12px;
-	right: 12px;
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	border: 1px solid #3a3f7a;
-	background: #1a1f5a;
-	color: #f2f2f2 !important;
-	/* HC - Ensure close icon stays visible over global text color */
-	text-shadow: none;
-	font-size: 18px;
-	font-weight: 700;
-	cursor: pointer;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
-.petition-close:hover {
-	background: #2a3070;
-}
-.petition-form-inner {
-	display: flex;
-	flex-direction: column;
-	gap: 0.75rem;
-}
-.petition-field {
-	display: flex;
-	flex-direction: column;
-	gap: 0.3rem;
-	text-align: left;
-}
-.petition-label {
-	font-size: 14px;
-	font-weight: 600;
-	color: #f2f2f2 !important;
-	text-shadow: none;
-}
-.petition-form input,
-.petition-form textarea {
-	border: 1px solid #3a3f7a;
-	border-radius: 10px;
-	padding: 0.5rem 0.75rem;
-	font-size: 16px;
-	color: #000033;
-	background: #f5e4ec;
-}
-.petition-form input:focus,
-.petition-form textarea:focus {
-	outline: none;
-	border-color: #f2f2f2;
-	box-shadow: 0 0 0 3px rgba(242, 242, 242, 0.2);
-}
-.petition-submit {
-	align-self: center;
-	padding: 0.5rem 1.5rem;
-	border-radius: 999px;
-	border: none;
-	background: #b0205f;
-	color: #ffffff;
-	font-size: 16px;
-	font-weight: 600;
-	cursor: pointer;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.petition-submit:hover {
-	transform: translateY(-1px);
-	box-shadow: 0 8px 16px rgba(0,0,0,0.18);
-}
-
 
 /* New responsive navigation */
 .site-nav {
 	/* Match footer navy */
-	background: #000033;
-	color: #0a0a0a;
+	
+/* Change header back to pink F3A9C0 on 010225 */
+/* was changed to 000033 by H.C. on 123125 */
+	background: #F3A9C0;
+/* Change header text back to pink 000033 on 010225 */
+/* was changed to 0a0a0a by H.C. on 123125 */
+	color: #000033;
 	position: relative;
 	z-index: 10; /* Keep nav above page content */
 	/* Force full-viewport width even when placed inside centered wrappers */
@@ -211,8 +87,12 @@ body [color="#FF0000"],
 .site-nav .nav-links li {
 	position: relative;
 }
+
+/* Change header text back to pink 000033 on 010225 */
+/* was changed to 0a0a0a by H.C. on 123125 */
+
 .site-nav .nav-links a {
-	color: #0a0a0a;
+	color: #ffffff;
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 20px;
@@ -223,7 +103,7 @@ body [color="#FF0000"],
 }
 /* ToDo: Change to White ffffff ? */
 .site-nav .nav-links a:hover {
-	color: #b0205f; /* deeper pink/purple hover */
+	color: #ffffff; /* deeper pink/purple hover */
 }
 .site-nav .nav-links .nav-caret {
 	font-size: 0.75em;
@@ -236,7 +116,7 @@ body [color="#FF0000"],
 	height: 28px;
 	border-radius: 50%;
 	/* HC - Lighter control to match navy mobile panel */
-	border: 2px solid #f2f2f2;
+	border: 2px solid #ffffff;
 	font-size: 14px;
 	line-height: 1;
 	font-weight: 600;
@@ -300,7 +180,7 @@ body [color="#FF0000"],
 .site-nav .nav-sub .nav-sub-inner a {
 	padding: 0.35rem 0.75rem;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
 }
 .site-nav .nav-sub .nav-plus {
 	display: none;
@@ -314,13 +194,14 @@ body [color="#FF0000"],
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 600;
 	text-decoration: none;
 	color: #0a0a0a;
 }
 /* ToDo: Change to White ffffff ? */
+/* Henry To Tutor!                */
 .site-nav .nav-sub a:hover {
-	color: #b0205f;
+	color: #ffffff;
 }
 .site-nav .nav-sub .nav-label {
 	/* HC - Center submenu label text even when nav-label defaults to left */
@@ -377,11 +258,11 @@ body [color="#FF0000"],
 	display: block;
 	height: 4px;
 	width: 30px;
-	background: #f2f2f2;
+	background: #400033;
 	border-radius: 4px;
 	transition: transform 0.3s ease, opacity 0.3s ease;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
 	.site-nav .nav-links {
 		position: fixed;
 		top: 0;
@@ -427,7 +308,7 @@ body [color="#FF0000"],
 			right: 2.6rem;
 			top: 50%;
 			transform: translateY(-50%);
-			background: transparent;
+			background: #ffffff;
 			color: #0a0a0a;
 			z-index: 2;
 		}
@@ -442,12 +323,17 @@ body [color="#FF0000"],
 				text-align: center;
 				width: auto;
 			}
+
+
 /* ToDo: Change to White ffffff ? */
+/* Henry To Tutor!                */
+
+
 	.site-nav .nav-links a:hover {
 		color: #b0205f;
 	}
 			.site-nav .nav-links.closing .nav-sub {
-				transition: max-height 0.28s ease, opacity 0.2s ease;
+				transition: max-height 0.45s ease, opacity 0.3s ease;
 				max-height: 0;
 				opacity: 0;
 			}
@@ -463,6 +349,9 @@ body [color="#FF0000"],
 				pointer-events: none;
 				transform: none !important;
 				/* HC - Mobile submenu matches desktop dropdown color */
+				
+/* ToDo: ?  Not color chosen by me !!! */
+/* Henry To Tutor!                */			
 				background: #1a1f5a;
 				box-shadow: none;
 				border: none;
@@ -470,7 +359,7 @@ body [color="#FF0000"],
 				margin: 0.25rem 0 0 0;
 				max-height: 0;
 				overflow: hidden;
-				transition: max-height 0.28s ease, opacity 0.2s ease;
+				transition: max-height 0.45s ease, opacity 0.3s ease;
 			}
 			/* HC - Ensure closed mobile items stay hidden even if menu was open */
 			.site-nav .has-sub:not(.mobile-open) > .nav-sub {
@@ -486,12 +375,13 @@ body [color="#FF0000"],
 		margin: 0.2rem 0;
 		text-align: center;
 	}
-		.site-nav .nav-sub a {
-			display: block;
-			width: 100%;
-			padding: 0.4rem 0.5rem;
-			text-align: center;
-		}
+	.site-nav .nav-sub a {
+		display: block;
+		width: 100%;
+		padding: 0.4rem 0.5rem;
+		text-align: center;
+		color: #ffffff !important;
+	}
 			.site-nav .nav-sub .nav-sub-inner {
 				margin: 0;
 				padding: 0;
@@ -503,7 +393,7 @@ body [color="#FF0000"],
 				visibility: hidden;
 				overflow: hidden;
 				transform: none !important;
-				transition: max-height 0.28s ease, opacity 0.2s ease;
+				transition: max-height 0.45s ease, opacity 0.3s ease;
 				background: transparent;
 				border: none;
 				box-shadow: none;
@@ -511,6 +401,9 @@ body [color="#FF0000"],
 			}
 	.site-nav .nav-sub .nav-sub-inner a {
 		text-align: center;
+	}
+	.site-nav .nav-sub .nav-sub-inner a {
+		color: #ffffff !important;
 	}
 				.site-nav .nav-sub .has-sub.mobile-open > .nav-sub-inner {
 					display: block;
@@ -527,7 +420,11 @@ body [color="#FF0000"],
 		height: 24px;
 		border-radius: 50%;
 		/* HC - Lighter control to match navy mobile panel */
-		border: 2px solid #f2f2f2;
+		
+/* ToDo: ?  Not color chosen by me !!! */
+/* Henry To Tutor! Appears to be a shade of white               */		
+		
+		border: 2px solid #ffffff;
 		font-size: 12px;
 		line-height: 1;
 		font-weight: 600;
@@ -538,13 +435,20 @@ body [color="#FF0000"],
 		top: 50%;
 		transform: translateY(-50%);
 	}
+
+
+
 /* ToDo: Change to White ffffff ? */
+/* ToDo: ?  Not color chosen by me !!!            */
+/* Henry To Tutor! Appears to be a shade of white */	
+
 		/* HC - Menu circle button switches to x when submenu is open */
 		.site-nav .has-sub.has-sub-inner.mobile-open > a .nav-plus {
 			transform: translateY(-50%) rotate(45deg);
-			background: #f2f2f2;
+			
+			background: #ffffff;
 			color: #1a1f5a;
-			border-color: #f2f2f2;
+			border-color: #ffffff;
 		}
 			.site-nav .nav-links.active {
 				transform: translateX(0);
@@ -569,11 +473,15 @@ body [color="#FF0000"],
 				margin-top: 0;
 			}
 /* ToDo: Change to White ffffff ? */
+/* Circle color when menu expanded */
+/* Background & Border from #b0205f to #F3A9C0 on 010426 */
+/* Henry To Tutor! Not sure if working?                  */	
+
 				.site-nav .has-sub.mobile-open > a .nav-plus {
 					transform: translateY(-50%) rotate(45deg);
-					background: #b0205f;
+					background: #ffffff;
 					color: #ffffff;
-					border-color: #b0205f;
+					border-color: #ffffff;
 		}
 	.site-nav .hamburger {
 		display: flex;
@@ -600,6 +508,15 @@ body [color="#FF0000"],
 	/* Rotate bottom bar into the X */
 	transform: translateY(-10px) rotate(-45deg);
 }
+.site-nav .hamburger.active span {
+	background: #ffffff;
+}
+
+
+/* Henry To Tutor! Not sure if working?    */
+/* Henry To Tutor! Not sure if working?    */
+/*  #333333?  Something overriding gray color of 333333?   */
+/*  #FFF? What is #FFF? Something overriding color of FFF?   */
 
 #menu {
 	background: #333333;
@@ -731,10 +648,89 @@ body [color="#FF0000"],
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 }
-/* HC - Force light text in top nav to match footer */
+.footer-nav.footer-nav-contained {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+.footer-nav.footer-nav-centered {
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+.footer-nav.footer-nav-centered .foot-nav-inner {
+	align-items: center;
+	justify-content: center;
+	max-width: none;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+.footer-nav.footer-nav-centered .nav-links {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	margin: 0 auto;
+	padding: 0;
+}
+.footer-nav.footer-nav-centered .nav-links a {
+	justify-content: center;
+	text-align: center;
+}
+.footer-nav.footer-nav-contained .foot-nav-inner {
+	max-width: none;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+/* HC - Match top nav text to footer background color */
 .site-nav,
 .site-nav * {
-	color: #f2f2f2 !important;
+	color: #000033 !important;
+}
+.site-nav .nav-sub a,
+.site-nav .nav-sub .nav-sub-inner a {
+	color: #ffffff !important;
+}
+.site-nav .nav-sub .nav-label {
+	color: #ffffff !important;
+}
+.site-nav .nav-sub a:hover .nav-label,
+.site-nav .nav-sub a:focus .nav-label {
+	color: #ffffff !important;
+}
+.site-nav .nav-sub a:hover,
+.site-nav .nav-sub a:focus,
+.site-nav .nav-sub .nav-sub-inner a:hover,
+.site-nav .nav-sub .nav-sub-inner a:focus {
+	color: #ffffff !important;
+}
+.site-nav .hamburger span {
+	background: #400033 !important;
+}
+.site-nav .hamburger.active span {
+	background: #ffffff !important;
+}
+@media (max-width: 1024px) {
+	.site-nav .nav-sub a,
+	.site-nav .nav-sub .nav-sub-inner a {
+		color: #ffffff !important;
+	}
+	.site-nav .nav-links a,
+	.site-nav .nav-links .nav-label {
+		color: #ffffff !important;
+	}
+	.site-nav .nav-plus {
+		background: #ffffff !important;
+		border-color: #ffffff !important;
+	}
+	.site-nav .has-sub.mobile-open > a .nav-plus,
+	.site-nav .has-sub.has-sub-inner.mobile-open > a .nav-plus {
+		background: #ffffff !important;
+		border-color: #ffffff !important;
+	}
 }
 /* HC - Force light white footer text to override global body color */
 .footer-nav,
@@ -758,15 +754,17 @@ body [color="#FF0000"],
 	gap: 0.2rem;
 	text-align: center;
 }
-.footer-nav .footer-logo {
-	height: 64px;
-	width: auto;
-	display: block;
-}
+.footer-nav .footer-copyright {
+    font-family: arial,verdana,helvetica,Sans Serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+	letter-spacing: 0.02em;
+
 .footer-nav .footer-title {
 	font-size: 20px;
 	font-weight: 700;
-	color: #fbe6ee;
+	color: #ffffff;
 	letter-spacing: 0.02em;
 }
 .footer-nav .footer-subtitle {
@@ -798,15 +796,28 @@ body [color="#FF0000"],
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 1.25rem;
 	column-gap: 3.25rem; /* extra spacing between top-level items */
 	margin: 0;
 	padding: 0;
 }
+.footer-nav.footer-nav-centered .nav-links {
+	gap: 0.35rem;
+}
+.footer-nav .footer-links-centered {
+	display: inline-flex;
+	width: auto;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 .footer-nav .nav-links li {
 	list-style: none;
 	position: relative;
+}
+.footer-nav.footer-nav-centered .footer-contact-only {
+	padding-top: 1.25rem;
 }
 .footer-nav .nav-links a {
 	color: #ffffff;
@@ -858,7 +869,454 @@ body [color="#FF0000"],
 }
 /* Bottom Footer Nav Bar   */
 
-/* Legacy typography and helper classes */
+/* More Bottom Footer Nav Bar   */
+		.site-nav .nav-sub {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			/* HC - Lighter navy submenu to complement top nav */
+			background: #1a1f5a;
+			list-style: none;
+			padding: 0.5rem 0;
+			margin: 2px 0 0 0;
+			min-width: 320px;
+			border: 1px solid #2f356e;
+			border-radius: 10px;
+			box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+			transform: translate(-50%, 2px);
+			transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+		}
+.site-nav .nav-sub li {
+	width: 100%;
+}
+.site-nav .nav-sub .nav-sub-inner {
+	list-style: none;
+	margin: 0.25rem 0 0 0.5rem;
+	padding: 0.25rem 0 0 0;
+	display: none;
+	position: static;
+	background: transparent;
+	min-width: auto;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0.4rem 0;
+}
+.site-nav .nav-sub .nav-sub-inner li {
+	margin: 0.1rem 0;
+}
+.site-nav .nav-sub .nav-sub-inner a {
+	padding: 0.35rem 0.75rem;
+	font-size: 16px;
+	font-weight: 600;
+}
+.site-nav .nav-sub .nav-plus {
+	display: none;
+}
+.site-nav .nav-sub a {
+	/* HC - Center submenu links (override later duplicate rule) */
+	display: block;
+	padding: 0.5rem 1rem;
+	/* HC - Keep submenu width stable so centering is accurate */
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #0a0a0a;
+}
+/* ToDo: Change to White ffffff ? */
+.site-nav .nav-sub a:hover {
+	color: #ffffff;
+}
+		.site-nav .has-sub.hover-open > .nav-sub {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: translate(-50%, 2px);
+		}
+		.site-nav .has-sub:hover > .nav-sub {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: translate(-50%, 0);
+		}
+.site-nav .has-sub:hover > a .nav-caret {
+	transform: rotate(180deg);
+}
+.site-nav .has-sub.hover-open > a .nav-caret {
+	transform: rotate(180deg);
+}
+.site-nav .nav-sub .has-sub:hover > .nav-sub-inner,
+.site-nav .nav-sub .has-sub.hover-open > .nav-sub-inner {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+.site-nav .nav-links .nav-caret {
+	font-size: 0.75em;
+	line-height: 1;
+}
+.site-nav .hamburger {
+	/* Hamburger button; hidden on desktop */
+	display: none;
+	flex-direction: column;
+	gap: 6px;
+	cursor: pointer;
+	width: 30px;
+	background: transparent;
+	border: none;
+	padding: 0;
+	position: relative;
+	z-index: 11; /* Ensure hamburger stays above sliding panel */
+}
+.site-nav .hamburger {
+	/* Prevents double margin collapse if styled elsewhere */
+}
+.site-nav .hamburger span {
+	/* The three bars of the hamburger */
+	display: block;
+	height: 4px;
+	width: 30px;
+	background: #400033;
+	border-radius: 4px;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 1024px) {
+	.site-nav .nav-links {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 80%;
+		max-width: 380px;
+		/* HC - Mobile slide-in panel matches submenu color */
+		background: #1a1f5a;
+		flex-direction: column;
+		padding: 5rem 1.5rem;
+		gap: 1rem;
+		/* Slide in from the right on mobile */
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out, opacity 0.2s ease;
+		/* Hide and disable clicks by default to avoid flashing on resize */
+		visibility: hidden;
+		pointer-events: none;
+		align-items: stretch;
+	}
+	.site-nav .nav-links li {
+		width: 100%;
+	}
+	.site-nav .nav-links li:first-child {
+		margin-top: 1rem; /* spacing above Home */
+	}
+			.site-nav .nav-links a {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				width: 100%;
+				text-align: left;
+				padding: 0.75rem 2rem 0.75rem 0.75rem;
+				overflow: visible;
+			}
+	.site-nav .nav-caret {
+		display: none;
+	}
+		.site-nav .nav-plus {
+			display: inline-flex !important;
+			position: absolute;
+			right: 2.6rem;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #ffffff;
+			color: #0a0a0a;
+			z-index: 2;
+		}
+			.site-nav .nav-links .nav-label {
+				flex: 1;
+				text-align: left;
+				width: 100%;
+			}
+/* ToDo: Change to White ffffff ? */
+	.site-nav .nav-links a:hover {
+		color: #b0205f;
+	}
+			.site-nav .nav-links.closing .nav-sub {
+				transition: max-height 0.45s ease, opacity 0.3s ease;
+				max-height: 0;
+				opacity: 0;
+			}
+			.site-nav .nav-sub {
+				position: static !important;
+				display: block;
+				width: 100%;
+				min-width: 100%;
+				left: auto !important;
+				right: auto !important;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transform: none !important;
+				/* HC - Mobile submenu matches desktop dropdown color */
+				background: #1a1f5a;
+				box-shadow: none;
+				border: none;
+				padding: 0;
+				margin: 0.25rem 0 0 0;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.45s ease, opacity 0.3s ease;
+			}
+			/* HC - Ensure closed mobile items stay hidden even if menu was open */
+			.site-nav .has-sub:not(.mobile-open) > .nav-sub {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transform: none !important;
+				max-height: 0;
+			}
+	.site-nav .nav-sub li {
+		padding-left: 0;
+		border-left: none;
+		margin: 0.2rem 0;
+		text-align: center;
+	}
+		.site-nav .nav-sub a {
+			display: block;
+			width: 100%;
+			padding: 0.4rem 0.5rem;
+			text-align: center;
+		}
+			.site-nav .nav-sub .nav-sub-inner {
+				margin: 0;
+				padding: 0;
+				position: static !important;
+				display: block;
+				width: 100%;
+				max-height: 0;
+				opacity: 0;
+				visibility: hidden;
+				overflow: hidden;
+				transform: none !important;
+				transition: max-height 0.45s ease, opacity 0.3s ease;
+				background: transparent;
+				border: none;
+				box-shadow: none;
+				min-width: auto;
+			}
+	.site-nav .nav-sub .nav-sub-inner a {
+		text-align: center;
+	}
+				.site-nav .nav-sub .has-sub.mobile-open > .nav-sub-inner {
+					display: block;
+					max-height: 500px;
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					margin-top: 0.25rem;
+				}
+		.site-nav .nav-sub .nav-plus {
+			display: inline-flex;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		border: 2px solid #0a0a0a;
+		font-size: 12px;
+		line-height: 1;
+		font-weight: 600;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+/* ToDo: Change to White ffffff ? */
+		.site-nav .has-sub.has-sub-inner.mobile-open > a .nav-plus {
+			transform: translateY(-50%) rotate(45deg);
+			background: #ffffff;
+			color: #ffffff;
+			border-color: #ffffff;
+		}
+			.site-nav .nav-links.active {
+				transform: translateX(0);
+				visibility: visible;
+				pointer-events: auto;
+				opacity: 1;
+			}
+			.site-nav .nav-links.closing {
+				transform: translateX(100%);
+				visibility: visible;
+				pointer-events: none;
+				opacity: 1;
+			}
+			.site-nav .nav-links:not(.active) {
+				opacity: 0.99; /* ensure transition triggers */
+			}
+			.site-nav .nav-links:not(.active) .nav-sub {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				max-height: 0;
+				margin-top: 0;
+			}
+/* ToDo: Change to White ffffff ? */
+				.site-nav .has-sub.mobile-open > a .nav-plus {
+					transform: translateY(-50%) rotate(45deg);
+					background: #ffffff;
+					color: #ffffff;
+					border-color: #ffffff;
+		}
+	.site-nav .hamburger {
+		display: flex;
+	}
+			.site-nav .has-sub.mobile-open > .nav-sub {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				transform: none;
+				max-height: 400px; /* large enough to show all subitems */
+			margin-top: 0.25rem;
+			padding-top: 0;
+		}
+}
+.site-nav .hamburger.active span:nth-child(1) {
+	/* Rotate top bar into the X */
+	transform: translateY(10px) rotate(45deg);
+}
+.site-nav .hamburger.active span:nth-child(2) {
+	/* Hide middle bar */
+	opacity: 0;
+}
+.site-nav .hamburger.active span:nth-child(3) {
+	/* Rotate bottom bar into the X */
+	transform: translateY(-10px) rotate(-45deg);
+}
+.site-nav .hamburger.active span {
+	background: #ffffff;
+}
+
+#menu {
+	background: #333333;
+/* ToDo What is #FFF  */
+	color: #FFF;
+	width: 100%;
+	box-sizing: border-box;
+/* height: 45px;  */
+	height: 45px;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 2px;
+}
+/* Header layout wrappers for full-width nav */
+.header-block { width: 100%; margin: 0 auto; }
+.logo-row { text-align: center; }
+.nav-row { width: 100%; margin: 0 auto; }
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+/*   */
+
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+/*  hover was 0099CC */
+/*  hover was 000099 */
+#menu li a:hover {
+	color: #000000;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+/*  */
+/*  */
+/*  */
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+/*  */
+/*  */
+/*  */
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 300px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+/* End Menu css */
+/* End Menu css */
+@media screen and (max-width: 800px){
+	#menu {position:relative;}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:grey}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+/* End Footer Menu css */
+/* More Bottom Footer Nav Bar   */
 
 
 
@@ -1030,12 +1488,13 @@ COLOR="#000099";
 }
 .homelandasterisk {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FFFFFF; Text-Decoration: none;
 }
-
+.homepgcopyright {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
 
 /*  text-shadow: 0px 0px 0px rgba(0,0,0,0.6); */
 /*  Text-Decoration: underline; */
 .evidencelinkfont {
-FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif; COLOR: #000033;
+FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif; COLOR: #ffffff;
 }
 
 /* COLOR: #669900; */
@@ -1066,6 +1525,10 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Arial, Helvetica, Sans Serif;  
 .homelandshadow2 {FONT-SIZE: 33px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: none; text-shadow: 6px 6px 6px rgba(0,0,0,0.2);
 }
 
+/* Used with eleanoroftenafly.com john doe pages */
+/* Note below homepgparatop */
+.notebelowcalltoaction {FONT-SIZE: 16px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #000033; Text-Decoration: none;
+}
 
 /* Removed= FONT-SIZE: 13px;  Text-Decoration: underline; */
 .homelandtest {FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: underline;
@@ -1113,12 +1576,63 @@ COLOR: #000000;
 }
 
 /* Used with Eleanor Of Tenafly website */
+.1sttablefillabovelogoandnav {width: 100%; max-width: 700px; margin: 0 auto;
+}
+
+/* Used with Eleanor Of Tenafly website johndoe#1, etc. */
+/* filler below logo and nav menu johndoe#1, etc. */
+.1sttablefillbelowlogoandnav {width: 100%; max-width: 100%;  
+}
+
+/* table for GoTo Top Of Page below logo nav menu and filler table. johndoe#1, etc.  */
+.2ndtablefillbelowlogoandnav {width: 100%; max-width: 100%;  
+}
+
+/* Used with Eleanor Of Tenafly website */
 /* border: 1px solid #000000 */
 .1stboxtablecontent {padding: 10px; width: 100%; max-width: 100%; border: 1px solid #000000;
 }
 .purposetable {padding: 10px; width: 100%; max-width: 100%;  
 }
-.evidencedatetable {padding: 10px; width: 100%; max-width: 100%; border: 1px solid #000000;
+
+
+/* Not used on evidence-10-04-2023.html */
+/* Check other pages ToDo */
+
+
+/* or 000033 */
+.evidencedatetable {padding: 10px; width: 100%; max-width: 100%; border: 2px solid #000033; background-color: #ffffff;
+}
+/* or 000033 */
+.evidencedatetablecontainer {padding: 10px; width: 100%; max-width: 100%; border: 2px solid #000033; background-color: #ffffff;
+}
+
+/* or 000033 */
+.evidencedatetableinner {padding: 10px; width: 100%; max-width: 100%; border: 0px solid #000033; background-color: #ffffff;
+}
+
+/*           */
+/* or 000033 */
+.evidencedatetableinner061623 {padding: 10px; width: 100%; max-width: 100%; border: 0px solid #000033; background-color: #999999;
+}
+.pgcontainer img,
+.evidencedatetablecontainer img,
+.evidencedatetableinner img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+	.evidencedatetablecontainer,
+	.evidencedatetableinner {
+		table-layout: fixed;
+		width: 100%;
+	}
+	.evidencedatetablecontainer td,
+	.evidencedatetableinner td {
+		overflow-wrap: anywhere;
+		word-break: break-word;
+	}
 }
 
 
@@ -1148,8 +1662,31 @@ COLOR: #000000;
 /*  old color of background-color: #CCCCFF;  */
 .urltableandgototop {padding: 10px; width: 100%; max-width: 100%;
 }
-/*  White is #FFFFFF Black is #000000 */
+/*  White is #FFFFFF. Black is #000000 */
 .blankbottom {padding: 10px; width: 100%; max-width: 100%; background-color: #f5e4ec;
+}
+/*  White is #FFFFFF. Black is #000000 */
+.footerlinks {padding: 10px; width: 100%; max-width: 100%; background-color: #003300;
+}
+/*  White is #FFFFFF. Black is #000000 */
+.footertablecopyright {padding: 10px; width: 100%; max-width: 100%; background-color: #000033;
+}
+.footertablecopyright.footertablecopyright-full {
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+.footer-full-bleed {
+	background: #000033;
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	padding-bottom: 2rem;
+}
+/*  White is #FFFFFF. Black is #000000 1234 */
+.footertabcopyfont {FONT-SIZE: 12px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; color: #ffffff;
+}
+.footertablecopyfont {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none;
 }
 
 
