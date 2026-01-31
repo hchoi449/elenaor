@@ -244,6 +244,7 @@ body [color="#FF0000"],
 	gap: 6px;
 	cursor: pointer;
 	width: 30px;
+	height: 30px;
 	background: transparent;
 	border: none;
 	padding: 0;
@@ -261,6 +262,29 @@ body [color="#FF0000"],
 	background: #400033;
 	border-radius: 4px;
 	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.site-nav .hamburger svg {
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	pointer-events: none;
+}
+.site-nav .hamburger .hamburger-close {
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.8);
+}
+.site-nav .hamburger.active .hamburger-icon {
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.8);
+}
+.site-nav .hamburger.active .hamburger-close {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
 }
 @media (max-width: 1024px) {
 	.site-nav .nav-links {
@@ -685,7 +709,9 @@ body [color="#FF0000"],
 	padding-left: 0;
 	padding-right: 0;
 }
+
 /* HC - Match top nav text to footer background color */
+
 .site-nav,
 .site-nav * {
 	color: #000033 !important;
@@ -710,8 +736,20 @@ body [color="#FF0000"],
 .site-nav .hamburger span {
 	background: #400033 !important;
 }
+.site-nav .hamburger svg {
+	color: #400033 !important;
+	fill: #400033 !important;
+}
 .site-nav .hamburger.active span {
 	background: #ffffff !important;
+}
+.site-nav .hamburger.active svg {
+	color: #ffffff !important;
+	fill: #ffffff !important;
+}
+.site-nav .hamburger[aria-expanded="true"] svg {
+	color: #ffffff !important;
+	fill: #ffffff !important;
 }
 @media (max-width: 1024px) {
 	.site-nav .nav-sub a,
@@ -1320,6 +1358,111 @@ body [color="#FF0000"],
 
 
 
+/* Begin Tags for John Doe's & Evidence Link Date Pages */
+/* from liveworkstudio.com/case/helping-a-sportswear-giant-become-customer-obsessed/" class="read-more"> */
+
+.case-text {
+  color: #000033;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-tags {
+  margin-bottom: 16px;
+}
+
+/* Gray colors under B&W: FFFFFF (white)/ E6E6E6/ DADADA/ CDCDCD/ C1C1C1/ B4B4B4/ A7A7A7/ 9A9A9A/ 8E8E8E/ 818181
+/* Darker Grays under B&W: 737373/ 666666/ 595959/ 4B4B4B/ 3D3D3D/ 303030/ 212121/ 131313/ 050505/ 000000 (Black) */
+
+/* Border test Light Gray #999999 */
+/* Border test dark pink *f3a9c0 from header navigation */
+/* Background test Brightish Green?  #99ff99 */
+/* Background test lighter than above Green?  #99ffcc */
+
+.case-tags span {
+  FONT-FAMILY: Arial, Helvetica, Sans Serif; /* Added by me on 011426  */
+  display: inline-block;
+  border: 2px solid #DADADA;
+  padding: 2px 8px;
+  margin: 2px;
+  font-size: .9rem;
+  font-weight: 700;      /* ToDo: 300-600= No Affect. 700 Has an effect Try on Current Browser */
+  border-radius: 24px;
+  background: #99ffcc;
+  
+}
+
+/* My rounded block */
+.case-tags blockspan {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 2px 8px;
+  margin: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 24px;
+  background: #fff;
+}
+
+/* Removed background-color: #f3a9c0; Stays the same as span above=99ffcc */
+.case-tags span:hover {
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #000033;
+  text-decoration: underline;
+}
+
+.case-text h3 {
+  margin-bottom: 16px;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.case-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.case-text .read-more {
+  background: #f8e8fb;
+  border: 1px solid #000;
+  border-radius: 28px;
+  padding: 7px 17px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+  width: max-content;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+/* End Tags */
+
+/* Column Span For Separator Rule On John Doe# Page */
+
+.case-text {
+  color: #000033;
+  display: flex;
+  flex-direction: column;
+}
+
+/*   display: inline-block; */
+.ruleseparatoronjohndoepg {
+
+  border: 1px solid #000033;
+  padding: 4px 0px;
+  margin: 0px;
+  border-radius: 0px;
+  background: #FF99FF;  /* was nav block pink shade of F3A9C0. Now pink shade from logo */
+  width: 100%;
+  line-height: 10px;
+/*  line-height: 120%;  */
+}
+
+
 .midframelink {
 	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif
 }
@@ -1446,6 +1589,19 @@ COLOR="#000099";
 .tenafly000099AVHSnonbold12 {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
 COLOR="#000066";
 }
+
+
+/* Used With Official Work Position Title in Table */
+.tenaflypositionnonboldsize {  font-size: .9rem;
+  font-weight: 400; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR="#000066";
+}
+/* Above Replace With Work Position Title in Table. Better tag title */
+.workpositionnonboldsize {  font-size: .9rem;
+  font-weight: 400; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR="#000066";
+}
+/* ----------------------- */
+
+
 /* Used for Our Analysis header 990000 or current */
 .ourcomment {FONT-SIZE: 13px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: underline;
 }
@@ -1510,7 +1666,7 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Arial, Helvetica, Sans Serif;  
 
 
 /* font color was CC3366 */
-.gototoplink {FONT-SIZE: 16px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #999999; Text-Decoration: none;
+.gototoplink {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #999999; Text-Decoration: none;
 }
 
 
@@ -1654,11 +1810,18 @@ COLOR: #000000;
 
 /* max-width: 780px; */
 
+
 /* Used with Eleanor Of Tenafly website  */
+/* Colored 3 Block Cell Filler */
+/* Was initially part of site. Now being removed */
+/* 1/13/26 on johndoe1.html */
+
 /* Website URL Name and GoTo top link  */
 /* Test fill background-color: #999999; */
 .tableaboveboturl {padding: 10px; width: 100%; max-width: 100%;
 }
+
+
 /*  old color of background-color: #CCCCFF;  */
 .urltableandgototop {padding: 10px; width: 100%; max-width: 100%;
 }
@@ -1683,6 +1846,16 @@ COLOR: #000000;
 	margin-right: calc(50% - 50vw);
 	padding-bottom: 2rem;
 }
+/* By me on 012226 */
+.footer-full-bleed-for-copyright {
+	background: #000033;
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	padding-bottom: 0rem; /* was 2rem */
+}
+
+
 /*  White is #FFFFFF. Black is #000000 1234 */
 .footertabcopyfont {FONT-SIZE: 12px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; color: #ffffff;
 }

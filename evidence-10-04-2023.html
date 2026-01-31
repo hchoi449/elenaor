@@ -74,47 +74,7 @@ function updatemenu() {
 
 
 <!-- Begin Responsive navigation bar -->
-<nav class="site-nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <div class="logo">
-      <a href="index.html" aria-label="Go to Home">
-        <!-- HC - Nav logo src uses site-hosted image for consistency -->
-        <img src="logo/eleanor-logo-bernhard-000033-121625.jpg" alt="Eleanor of Tenafly NJ">
-      </a>
-    </div>
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="index.html"><span class="nav-label">Home</span></a></li>
-      <li class="has-sub">
-        <a href="#prosecution"><span class="nav-label">Petition To Prosecute</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
-        <ul class="nav-sub">
-          <li><a href="boroughofficials.html"><span class="nav-label">The People</span></a></li>
-        </ul>
-      </li>
-      <li class="has-sub">
-        <a href="#legislation"><span class="nav-label">Petition for Legislation</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
-        <ul class="nav-sub">
-          <li><a href="legislation.html"><span class="nav-label">Legislation Page #1</span></a></li>
-          <!--<li><a href="petitions.html#official2"><span class="nav-label">Legislation Page #2</span></a></li> -->
-          <!--<li><a href="petitions.html#official3"><span class="nav-label">Legislation Page #3</span></a></li>> -->
-        </ul>
-      </li>
-      <li class="has-sub">
-        <a href="#obituary"><span class="nav-label">Obituary Info</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
-        <ul class="nav-sub">
-          <li><a href="rejectedobituary.html"><span class="nav-label">Rejected Obituary</span></a></li>
-          <li><a href="rejectionbypublisher.html"><span class="nav-label">Publisher Rejection Letter</span></a></li>
-          <li><a href="publishedobituary.html"><span class="nav-label">Published Obituary</span></a></li>
-        </ul>
-      </li>
-      <li><a href="#contact"><span class="nav-label">Contact</span></a></li>
-    </ul>
-  </div>
-</nav>
+<div id="shared-nav"></div>
 <!-- End Responsive navigation bar -->
 
 
@@ -1333,7 +1293,14 @@ Thanks to all nurses and doctors who may have tended to mother during her life. 
 <!-- -->
 
 <!-- HC - Use shared navigation behavior from nav.js -->
-<script src="nav.js"></script>
 
-</BODY>
+
+
+
+
+
+
+<div id="shared-footer"></div>
+<script src="layout.js"></script>
+</body>
 </HTML>
