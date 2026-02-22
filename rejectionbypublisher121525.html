@@ -2,7 +2,7 @@
 <html lang="en-US.utf8">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 <meta name='robots' content='noindex, nofollow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 <!-- This site is optimized with ... -->
 <title>Tenafly NJ Petition For Prosection Of Borough Code Enforcement Officer and All (Et Al)</title>
@@ -42,13 +42,13 @@ New Jersey
 <div class=pgcontainer>
 <!-- -->
 
-<!-- Responsive navigation bar -->
+<div class="header-block">
+<div class="nav-row">
 <nav class="site-nav" aria-label="Main navigation">
   <div class="nav-inner">
     <div class="logo">
-      <a href="index.html" aria-label="Go to Home">
-        <!-- HC - Nav logo src uses site-hosted image for consistency -->
-        <img src="http://eleanoroftenaflynj.com/eleanor-logo-bernhard-000033-121625.jpg" alt="Eleanor of Tenafly NJ">
+      <a href="index.html#home" aria-label="Go to Home">
+        <img src="eleanor-logo1-050725.jpg" alt="Eleanor of Tenafly NJ">
       </a>
     </div>
     <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -58,23 +58,13 @@ New Jersey
     </button>
     <ul class="nav-links">
       <!-- Menu links -->
-      <!-- HC - Home link targets index.html for consistent navigation -->
-      <li><a href="index.html"><span class="nav-label">Home</span></a></li>
+      <li><a href="index.html#home"><span class="nav-label">Home</span></a></li>
       <li class="has-sub">
-        <a href="#prosecution"><span class="nav-label">Petition To Prosecute</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
+        <a href="#petitions"><span class="nav-label">Petitions</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
         <ul class="nav-sub">
-          <!-- HC - Use updated label in Petition To Prosecute submenu -->
-          <li><a href="boroughofficials.html"><span class="nav-label">The People</span></a></li>
-          <!--<li><a href="petitions.html#official2"><span class="nav-label">Tenafly Borough Official #2</span></a></li> -->
-          <!--<li><a href="petitions.html#official3"><span class="nav-label">Tenafly Borough Official #3</span></a></li> -->
-        </ul>
-      </li>
-      <li class="has-sub">
-        <a href="#legislation"><span class="nav-label">Petition for Legislation</span><span class="nav-caret" aria-hidden="true">▾</span><span class="nav-plus" aria-hidden="true">+</span></a>
-        <ul class="nav-sub">
-          <li><a href="legislation.html"><span class="nav-label">Legislation Page #1</span></a></li>
-          <!--<li><a href="petitions.html#official2"><span class="nav-label">Legislation Page #2</span></a></li> -->
-          <!--<li><a href="petitions.html#official3"><span class="nav-label">Legislation Page #3</span></a></li>> -->
+          <li><a href="petitions.html#official1"><span class="nav-label">Tenafly Borough Official #1</span></a></li>
+          <li><a href="petitions.html#official2"><span class="nav-label">Tenafly Borough Official #2</span></a></li>
+          <li><a href="petitions.html#official3"><span class="nav-label">Tenafly Borough Official #3</span></a></li>
         </ul>
       </li>
       <li class="has-sub">
@@ -85,10 +75,14 @@ New Jersey
           <li><a href="publishedobituary.html">Published Obituary</a></li>
         </ul>
       </li>
-<li><a href="#contact"><span class="nav-label">Contact</span></a></li>
+      <li><a href="#donations"><span class="nav-label">Donations</span></a></li>
+      <li><a href="#contact"><span class="nav-label">Contact</span></a></li>
     </ul>
   </div>
 </nav>
+
+</div>
+</div>
 
 <Center>
 
@@ -1082,24 +1076,196 @@ Evidence documentation: Coming Soon!<br>
 </div>
 <!-- -->
 
+<script>
+// Toggle slide-in menu and hamburger → X
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = navLinks ? navLinks.querySelectorAll('a') : [];
+const plusButtons = navLinks ? navLinks.querySelectorAll('.nav-plus') : [];
+const innerPlusButtons = navLinks ? navLinks.querySelectorAll('.nav-sub .nav-plus') : [];
+const hoverSubs = navLinks ? navLinks.querySelectorAll('.has-sub') : [];
+const hoverTimers = new WeakMap();
+const desktopMedia = window.matchMedia('(min-width: 1025px)');
+const mobileMedia = window.matchMedia('(max-width: 1024px)');
+// HC - Mobile submenu height controller to avoid lingering open panels
+const setMobileSubState = (item, isOpen) => {
+  if (!item) return;
+  const sub = item.querySelector(':scope > .nav-sub');
+  if (!sub) return;
+  sub.style.maxHeight = isOpen ? `${sub.scrollHeight}px` : '0px';
+  sub.style.opacity = isOpen ? '1' : '0';
+  sub.style.visibility = isOpen ? 'visible' : 'hidden';
+  sub.style.pointerEvents = isOpen ? 'auto' : 'none';
+};
 
+let menuOpenedAt = 0;
 
-<!-- HC - Use shared navigation behavior from nav.js -->
-<script src="nav.js"></script>
-<!-- Footer navigation -->
-<nav class="footer-nav" aria-label="Footer navigation">
-  <div class="foot-nav-inner">
-    <div class="footer-brand">
-      <span class="footer-title">Eleanor of Tenafly NJ</span>
-          </div>
-    <ul class="nav-links">
-      <li><a href="index.html"><span class="nav-label">Home</span></a></li>
-      <li><a href="boroughofficials.html"><span class="nav-label">Petition To Prosecute</span></a></li>
-      <li><a href="legislation.html"><span class="nav-label">Petition for Legislation</span></a></li>
-      <li><a href="rejectedobituary.html"><span class="nav-label">Obituary Info</span></a></li>
-<li><a href="#contact"><span class="nav-label">Contact</span></a></li>
-    </ul>
-  </div>
-</nav>
+const closeMenu = () => {
+  const wasActive = navLinks.classList.contains('active');
+  if (wasActive) {
+    navLinks.classList.add('closing');
+  } else {
+    navLinks.classList.remove('closing');
+  }
+  navLinks.classList.remove('active');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('.has-sub.open').forEach((item) => {
+    item.classList.remove('open');
+  });
+  document.querySelectorAll('.has-sub.mobile-open').forEach((item) => {
+    item.classList.remove('mobile-open');
+    setMobileSubState(item, false);
+  });
+  if (wasActive) {
+    setTimeout(() => navLinks.classList.remove('closing'), 320);
+  }
+};
+
+const setActiveLink = () => {
+  const currentHash = window.location.hash || '#home';
+  links.forEach((link) => {
+    const href = link.getAttribute('href');
+    const isActive = href === currentHash || (!window.location.hash && href === '#home');
+    link.classList.toggle('active', isActive);
+  });
+};
+
+const toggleMenu = () => {
+  const isOpen = navLinks.classList.contains('active');
+  if (isOpen) {
+    closeMenu();
+    return;
+  }
+  navLinks.classList.add('active');
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  menuOpenedAt = Date.now();
+  setActiveLink();
+};
+
+hamburger.addEventListener('click', toggleMenu);
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    const justOpened = Date.now() - menuOpenedAt < 350;
+    if (navLinks.classList.contains('active') && !justOpened) {
+      toggleMenu();
+    }
+    setActiveLink();
+  });
+});
+
+window.addEventListener('resize', () => {
+  closeMenu();
+  document.querySelectorAll('.has-sub.open').forEach((item) => {
+    item.classList.remove('open');
+  });
+  document.querySelectorAll('.has-sub.mobile-open').forEach((item) => {
+    item.classList.remove('mobile-open');
+    setMobileSubState(item, false);
+  });
+  document.querySelectorAll('.nav-sub').forEach((sub) => {
+    sub.style.maxHeight = '';
+    sub.style.opacity = '';
+    sub.style.visibility = '';
+    sub.style.pointerEvents = '';
+  });
+});
+
+desktopMedia.addEventListener('change', (e) => {
+  if (e.matches) {
+    closeMenu();
+  }
+});
+mobileMedia.addEventListener('change', (e) => {
+  if (!e.matches) {
+    document.querySelectorAll('.has-sub.mobile-open, .has-sub.open').forEach((item) => {
+      item.classList.remove('mobile-open', 'open');
+      setMobileSubState(item, false);
+    });
+  }
+});
+
+window.addEventListener('hashchange', setActiveLink);
+setActiveLink();
+
+plusButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!mobileMedia.matches || !navLinks.classList.contains('active')) return;
+    const parent = btn.closest('.has-sub');
+    if (parent) {
+      const willOpen = !parent.classList.contains('mobile-open');
+      parent.classList.toggle('mobile-open', willOpen);
+      setMobileSubState(parent, willOpen);
+    }
+  });
+});
+
+innerPlusButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!mobileMedia.matches || !navLinks.classList.contains('active')) return;
+    const parent = btn.closest('.has-sub');
+    if (parent) {
+      const willOpen = !parent.classList.contains('mobile-open');
+      parent.classList.toggle('mobile-open', willOpen);
+      setMobileSubState(parent, willOpen);
+    }
+  });
+});
+
+document.addEventListener('click', (e) => {
+  const isClickInside = navLinks.contains(e.target) || hamburger.contains(e.target);
+  if (!isClickInside && navLinks.classList.contains('active')) {
+    closeMenu();
+  }
+});
+
+hoverSubs.forEach((item) => {
+  const sub = item.querySelector(':scope > .nav-sub');
+
+  const clearHoverTimer = () => {
+    const t = hoverTimers.get(item);
+    if (t) clearTimeout(t);
+  };
+  const closeHover = () => {
+    clearHoverTimer();
+    item.classList.remove('hover-open');
+  };
+  const closeHoverDelayed = () => {
+    clearHoverTimer();
+    const t = setTimeout(() => closeHover(), 1000);
+    hoverTimers.set(item, t);
+  };
+
+  item.addEventListener('mouseenter', () => {
+    clearHoverTimer();
+    hoverSubs.forEach((other) => {
+      if (other !== item) other.classList.remove('hover-open');
+    });
+    item.classList.add('hover-open');
+  });
+
+  item.addEventListener('mouseleave', (e) => {
+    if (sub && sub.contains(e.relatedTarget)) return;
+    closeHoverDelayed();
+  });
+
+  if (sub) {
+    sub.addEventListener('mouseenter', () => {
+      clearHoverTimer();
+    });
+    sub.addEventListener('mouseleave', (e) => {
+      if (item.contains(e.relatedTarget)) return;
+      closeHoverDelayed();
+    });
+  }
+});
+
+</script>
+
 </BODY>
 </HTML>
