@@ -1,0 +1,415 @@
+/* eleanorstyle.css  main style sheet for eleanoroftenafly.com */
+/* Used with */
+/* homepage of eleanoroftenafly.com */
+
+/* Used with */
+/* "".html */
+
+
+/* Begin Menu css */
+/* from cssportal.com using 800px breakpoint for viewport toggle */
+
+#menu {
+	background: #333333; /*  hover was 000099 */
+	color: #FFF;
+	height: 45px;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 2px;
+	
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+/*  hover was 0099CC */
+#menu li a:hover {
+	color: #000000; /*  hover was 000099 */
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+
+/* End Menu css */
+
+
+.midframelink {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif
+}
+
+.midframelinkhover A:hover {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000CC; TEXT-DECORATION: overline; font-weight=bold
+}
+
+
+/* Used with */
+/* bottomhome1.html */
+.botframelink {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif
+}
+
+.boldframelink {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; font-weight=bold
+}
+
+.boldhoverlink {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; font-weight=bold; COLOR: #0000CC
+}
+
+.FooterLinkNew A:hover {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000CC; TEXT-DECORATION: overline; font-weight=bold
+}
+
+
+
+/* Used with */
+/* newswtrsdesc.html */
+
+.SKItemNameFnt {FONT-SIZE: 18; FONT-WEIGHT: BOLD; FACE="Arial, Helvetica, sans-serif"; COLOR="#0000FF";
+}
+
+.ItemTitleItalic {FONT-SIZE: 15; FONT-WEIGHT: BOLD; FONT-STYLE: ITALIC;
+FACE="Arial, Helvetica, sans-serif"; COLOR="#0000FF";
+}
+
+.SKItemData {FONT-SIZE: 12; FONT-WEIGHT: BOLD; FACE="Arial, Helvetica, sans-serif"; COLOR="#FF6600";
+}
+
+.SKItemSizeNote {FONT-SIZE: 11; FACE="Arial, Helvetica, sans-serif"; COLOR="#FF6600";
+}
+
+.SKPrice  {FONT-SIZE: 12; FONT-WEIGHT: BOLD; FACE="Arial, Helvetica, sans-serif"; COLOR="#FF6600";
+}
+
+/* Used with */
+/* brandorderlinks1.html */
+.brandlink {
+	FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, Sans Serif
+}
+
+/* for brand link description */
+.branddescribe {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #FF9933;
+}
+
+.FooterLinkNew A:hover {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000CC; TEXT-DECORATION: overline; font-weight=bold
+}
+
+/* Used with */
+/* aboutus.html & contactsus.html */
+.plainfntsize10 {
+	FONT-SIZE: 10px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000FF;
+}
+.plainfntsize11 {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000FF;
+}
+.plainfntsize12 {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000FF;
+}
+.plainfntsize14 {
+	FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #0000FF;
+}
+
+/* Used with */
+/*  */
+/* homeusingtables.html, homeframemain.html aka index.html*/
+.irishboldhoverlink {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; font-weight=bold; COLOR: #008800;
+}
+
+
+/*  FONT-SIZE: 15px; FACE="Arial,Helvetica, sans-serif" COLOR="#0000FF" servicesgrayAVHSnonbold12 */
+/*  font SIZE="+1" FACE="Arial,Helvetica, sans-serif" COLOR="#0000FF"  */
+
+/* Used with */
+.servicesgrayVAHSnonbold10 {FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayVAHSnonbold11 {FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayVAHSnonbold12 {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayVAHSbold10 {FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayVAHSbold11 {FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayVAHSbold12 {FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000099";
+}
+.tenaflygrayVAHSbold12 {FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000033";
+}
+.tenafly000099VAHSbold12 {FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000033";
+}
+/* Used with section headers */
+.tenaflytempAVHSbold12 {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif;
+COLOR="#000066"; TEXT-DECORATION: underline; font-weight=bold
+}
+
+
+.servicesgrayAVHSnonbold10 {FONT-SIZE: 10px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayAVHSnonbold11 {FONT-SIZE: 11px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayAVHSnonbold12 {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.tenaflygrayAVHSnonbold12 {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000099";
+}
+.tenafly000099AVHSnonbold12 {FONT-SIZE: 12px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000066";
+}
+/* Used for Our Analysis header 990000 or current */
+.ourcomment {FONT-SIZE: 13px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: underline;
+}
+/* Used with Tenafly Landing Homepage Top */
+/* red is FF0000  */
+
+/* Begin - Used with eleanoroftenafly.com */
+
+
+.eleanorgrayAVHSnonbold16 {FONT-SIZE: 16px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000099";
+}
+
+
+/* End - Used with eleanoroftenafly.com */
+
+
+.homepgparatop {FONT-SIZE: 33px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #000000; text-shadow: 2px 2px 2px rgba(0,0,0,0.6); Text-Decoration: none;
+}
+/* Used with Tenafly Landing Homepage Top */
+/* red is FF0000  */
+/* Shadow effect  */
+.homelandshadow1 {FONT-SIZE: 33px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+.homelandshadow2 {FONT-SIZE: 33px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: none; text-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+}
+.homelandneed {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+
+/* Removed= FONT-SIZE: 13px;  Text-Decoration: underline; */
+.homelandtest {FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: underline;
+}
+.heading020123 {COLOR: #FF0000; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+}
+.introblock {FONT-SIZE: 16px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: none;
+}
+
+/* Used with Tenafly Petitions etc aka tflynow */
+/* Used with Comment analysis  */
+
+/* Used for Commment Analysis Header Line */
+.ourcomment {FONT-SIZE: 14px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: underline;
+}
+/* Used for Comment Analysis Content */
+.blogcomment {FONT-SIZE: 14px; FONT-WEIGHT: normal; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR: #000000;
+}
+
+/* Used for Commment Analysis Links to Petitions etc */
+
+.commentlink a:link {
+	FONT-SIZE: 14px; font-weight: bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #009900; Text-Decoration: underline;
+}
+.commentlink a:visited {
+	FONT-SIZE: 14px; font-weight: bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #333333; Text-Decoration: none;
+}
+.commentlink a:hover {
+	FONT-SIZE: 14px; font-weight: bold; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #000000; Text-Decoration: none;
+}
+.commentlink a:active {
+	FONT-SIZE: 14px; font-weight: bold; FONT-FAMILY: Arial, Helvetica, Sans Serif; COLOR: #333333; Text-Decoration: none;
+}
+
+/* Used with Tenafly Petitions etc */
+/* IE 5 column table */
+/* Used with Tenafly  */
+
+.pgcontainer {width: 100%; max-width: 700px
+}
+.outertable {  max-width: 1000px;
+}
+.5coltabl {width: 100%; max-width: 1000px;
+}
+.5colcell {width: 71%; max-width: 500px;
+}
+.5coltest {width: 90%; max-width: 600px;
+}
+.5colempty {width: 100%; max-width: 300px;
+}
+
+
+/* Used with Tenafly Links */
+.tenaflyhoverlink {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; font-weight=bold; COLOR: #003300
+}
+.ItalicArticleQuote {FONT-SIZE: 15; FONT-WEIGHT: BOLD; FONT-STYLE: ITALIC;
+FACE="Arial, Helvetica, sans-serif"; COLOR="#000066";
+}
+
+.servicesgrayAVHSbold10 {FONT-SIZE: 10px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayAVHSbold11 {FONT-SIZE: 11px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+.servicesgrayAVHSbold12 {FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
+COLOR="#000000";
+}
+
+
+
+
+
+/* Photo hidden text */
+TD.textpghideCCCCCC {
+	FONT-SIZE: 1px; COLOR: #CCCCCC; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+/* Media with test from codepen */
+
+/* Start Media Query */
+ 
+@media (max-width 767px) {  mobile
+    }
+    .hidden-xs {
+        display
+    }
+    .responsive-paragraph {
+        font-size
+    }
+}
+@media (min-width 768px) and (max-width 991px) {  Small Screen Rules 
+    .container {
+        width 750px
+    }
+    .visible-sm {
+        display block !important
+    }
+    .hidden-sm {
+        display none !important
+    }
+    .responsive-paragraph {
+        text-align center;
+        font-size 17px !important;
+        color #555 !important;
+        letter-spacing 1.3px;
+    }
+}
+@media (min-width 992px) and (max-width 1199px) {  Medium Screen Rules 
+    .container {
+        width 970px
+    }
+    .visible-md {
+        display block !important
+    }
+    .hidden-md {
+        display none !important
+    }
+    .responsive-paragraph {
+        font-size 20px !important;
+        color #777 !important;
+        letter-spacing 1.1px;
+    }
+}
+@media (min-width 1200px) {  Large Screen Rules 
+    .container {
+        width 1170px
+    }
+    .visible-lg {
+        display block !important
+    }
+    .hidden-lg {
+        display none !important
+    }
+}
+
+/* End Media Query */
+/* end Media with test from codepen */
+ 

@@ -6,6 +6,7 @@
 /* "".html */
 
 
+
 /* Begin Menu css */
 /* from cssportal.com using 800px breakpoint for viewport toggle */
 
@@ -35,99 +36,6 @@ body [color="#FF0000"],
 }
 
 
-/* Usage: caratbullettest1.html */
-.carat-bullet {
-display: inline-block;
-transform: rotate(90deg); /* sample code. transform: rotate(180deg); */
-font-size: 33px;
-font-weight: bold;
-}
-/* Usage: caratbullettest1.html */
-.carat-bullet-writ-mode-vert {
-/* display: inline-block; */
-/* transform: rotate(90deg); */  /* sample code. transform: rotate(180deg); */
-font-size: 33px;
-font-weight: bold;
-writing-mode:vetical: vertical-rl;
-}
-
-
-
-
-/* Usage: headerindexcontainertest1.html */
-.site-header {
-background-color: white;
-
-width: 100vw;
-margin-left: calc(50% - 50vw); /* These 2 lines stretches to left side of screen. */
-margin-right: calc(50% - 50vw);
-min-height: 50px;
-max-height: 100px;
-
-  /*  border-top-color: #0066CC; */          /* border: color: #000000; */ /* * #666666; */
-  /*  border-bottom-color: #0066CC; */
-
-border-top: 2px solid #CCCCCC;      /* code that works: border-top: 10px solid #666666; Or no color! */
-border-bottom: 2px solid #CCCCCC;   /*  */
-}
-.header-container {
-                     /* display: flex; */
-justify-content: space-between;
-align-items: center;
-margin: 0 auto;
-padding: 0 0px;
-
-}
-.header-box {
-width: 75%;
-min-width: 75%;
-background: #A3D39C;
-height=site-header;
-}
-/*  */
-.header-tab-le {
-
-}
-/* Usage: headerindexcontainertest1.html */
-
-
-/* Usage: headerindexcontainertest1.html */
-/* Site: Footer */
-.site-footer {
-background-color: white;
-
-width: 100vw;
-margin-left: calc(50% - 50vw); /* These 2 lines stretches to left side of screen. */
-margin-right: calc(50% - 50vw);
-min-height: 50px;
-max-height: 100px;
-
-  /*  border-top-color: #0066CC; */          /* border: color: #000000; */ /* * #666666; */
-  /*  border-bottom-color: #0066CC; */
-
-border-top: 2px solid #CCCCCC;      /* code that works: border-top: 10px solid #666666; Or no color! */
-border-bottom: 2px solid #CCCCCC;   /*  */
-}
-.footer-container {
-                     /* display: flex; */
-justify-content: space-between;
-align-items: center;
-margin: 0 auto;
-padding: 0 0px;
-}
-.footer-box {
-width: 75%;
-min-width: 75%;
-background: #A3D39C;
-height=site-footer;
-}
-.footer-tab-le {
-}
-/*  */
-/* Site: Footer */
-
-
-
 /* New responsive navigation */
 .site-nav {
 	/* Match footer navy */
@@ -144,16 +52,12 @@ height=site-footer;
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
-	max-height: 100px;
-	overflow: hidden;
 }
 .site-nav .nav-inner {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	box-sizing: border-box;
-	max-height: 100px;
-	padding: 2px 1.5rem;
+	padding: 1rem 1.5rem;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -340,7 +244,6 @@ height=site-footer;
 	gap: 6px;
 	cursor: pointer;
 	width: 30px;
-	height: 30px;
 	background: transparent;
 	border: none;
 	padding: 0;
@@ -358,29 +261,6 @@ height=site-footer;
 	background: #400033;
 	border-radius: 4px;
 	transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.site-nav .hamburger svg {
-	display: block;
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: opacity 0.2s ease, transform 0.2s ease;
-	pointer-events: none;
-}
-.site-nav .hamburger .hamburger-close {
-	opacity: 0;
-	transform: translate(-50%, -50%) scale(0.8);
-}
-.site-nav .hamburger.active .hamburger-icon {
-	opacity: 0;
-	transform: translate(-50%, -50%) scale(0.8);
-}
-.site-nav .hamburger.active .hamburger-close {
-	opacity: 1;
-	transform: translate(-50%, -50%) scale(1);
 }
 @media (max-width: 1024px) {
 	.site-nav .nav-links {
@@ -734,8 +614,8 @@ height=site-footer;
 	display: block
 }
 #menu ul.sub-menus a:hover{
-	background: #F2F2F2; /* white shade */
-	color: #444444; /* grey shade */
+	background: #F2F2F2;
+	color: #444444;
 }
 /* End Menu css */
 /* End Menu css */
@@ -832,20 +712,8 @@ height=site-footer;
 .site-nav .hamburger span {
 	background: #400033 !important;
 }
-.site-nav .hamburger svg {
-	color: #400033 !important;
-	fill: #400033 !important;
-}
 .site-nav .hamburger.active span {
 	background: #ffffff !important;
-}
-.site-nav .hamburger.active svg {
-	color: #ffffff !important;
-	fill: #ffffff !important;
-}
-.site-nav .hamburger[aria-expanded="true"] svg {
-	color: #ffffff !important;
-	fill: #ffffff !important;
 }
 @media (max-width: 1024px) {
 	.site-nav .nav-sub a,
@@ -1453,296 +1321,6 @@ height=site-footer;
 /* More Bottom Footer Nav Bar   */
 
 
-/* ------------------------------------------------- */
-/* John Doe pages & Story box related css-styling.   */
-/* ------------------------------------------------- */
-
-
-/* Used with eleanoroftenafly.com */
-/* Font for Story Header #CC3366 */
-.storytitle {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
-}
-
-.storyparagraph1 {
-text-indent: 20px;
-}
-
-/* No Work! */
-/*
-.Badsubtle-fill-line-grey {
-display: block;   /*  */
-display: flex;    /* inline-flex */
-padding: 10px;
-width: 100%;
-max-width: 100%;
-background: #666666;
-color: white;
-height: 2px;
-align-items: center;
-text-decoration: none;
-}
-*/
-
-
-/* No work*/
-.subtle-fill-line-grey2 {
-display: block;  /*  */
- display: flex;
-  border: 1px solid #000033;
-  padding: 3px 3px;
-  margin: 0px;
-  border-radius: 0px;
-  background: #FF99FF;  /* was nav block pink shade of F3A9C0. Now pink shade from logo */
-  width: 100%;
-  line-height: 10px;
-  }
-
-
-/* Using ruleseparatoronjohndoepg from above */
-/*  display: inline-block; */
-.fillerlinetestjohndoe1 {
-  border: 1px solid #000033;
-  padding: 4px 0px;
-  margin: 0px;
-  border-radius: 0px;
-  background: #FF99FF;  /*  */
-  width: 100%;
-  line-height: 25px;
-/*  line-height: 120%;  */
-}
-
-/* Using ruleseparatoronjohndoepg from above */
-/*  display: inline-block; */
-.fillerlinetestjohndoe2 {
-  /*  */
-  border: 1px solid #000033;
-  padding: 4px 0px;
-  margin: 0px;
-  border-radius: 0px;
-  background: #666666;  /*  */
-  width: 100%;
-  line-height: 2px;
-/*  line-height: 120%;  */
-}
-
-
-/*   display: inline-block; */
-.ruleseparatoronjohndoe1test1 {
-
-  border: 1px solid #000033;
-  padding: 4px 0px;
-  margin: 0px;
-  border-radius: 0px;
-  background: #FF99FF;  /* was nav block pink shade of F3A9C0. Now pink shade from logo */
-  width: 100%;
-  line-height: 10px;
-/*  line-height: 120%;  */
-}
-
-
-/* HR Vertical Rule Test1 with css */
-.vert-hr1 {
-            /* Set initial dimensions for the horizontal line */
-width: 100px; /* This will be the height of the vertical line */
-height: 2px;  /* This will be the thickness of the vertical line */
-background-color: #cccccck; /* Set the line color */
-border: none; /* Remove default border for cleaner look */
-
-transform: rotate(90deg); /* Apply the rotation */
-}
-/* Optional: Adjust position as needed, as rotation can affect layout flow */
-/* position: absolute; */  /* Does what? */
-/* left: 50%; */     /* Does what? */     /* Example positioning */
-
-
-/* HR Vertical Rule Test2 with css */
-.vert-hr2 {
-            /* Set initial dimensions for the horizontal line */
-width: 100px; /* This will be the height of the vertical line */
-height: 2px;  /* This will be the thickness of the vertical line */
-background-color: #cccccc; /* Set the line color */
-border: none; /* Remove default border for cleaner look */
-transform: rotate(90deg); /* Apply the rotation */
-}
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* Vertical Line Test1 with css .vertical-line */
-.vertical-line1 {
-/* padding: 0.75rem 2rem 0.75rem 0.75rem; */
-/* padding: 1rem 1.5rem; */   /* No work */
-/* display: inline-block; */  /* No work */
-/* margin-right: 10px; */     /* No work */ /* Adds space to the left and right. Left# to the top? Right # to the right?  */
-
-                /* margin: 20px 10px; */ /* No work */
-                /* padding-right: 10px; */ /* No work */
-
-
-/*
-Common Dark Navy Blue Hex Codes:
-#000080: The widely recognized standard for Navy Blue.
-#02075D: A very deep, almost black-blue.
-#0B0B45: Another deep, saturated dark blue option.
-#000083: A dark blue with a slightly higher blue value than pure #000080.
-Understanding the Codes:
-Hex codes: (like #RRGGBB) define colors for digital screens, with RR, GG, and BB representing Red, Green, and Blue values from 00 (none) to FF (full).
-Dark navy: uses very little red and green, focusing mostly on blue to create depth.
-You can choose a hex code like #000080 for classic navy or explore variations like #02075D for a richer, deeper tone in your digital designs.
-*/
-
-/* border-left to left side of screen. border-right to right side */
-                 /* Optional: Adjust spacing or display properties */
-margin: 0px 0px 0px 5px;     /* Adds space to the left and right. Left# to the top? Right # to the right?  */
-/* Increase in right number moves bar to the right! */
-
-padding: 1px 1px 1px 10px;  /* 10px top, 0px right, 10px bottom, 0px left */
-/*  left moves paragraph text on right side to leftwards! left moves paragraph text rightwards! */
-
-
-height: 100%;   /* Set the line's length */
-border-left: 2px solid #000080; /* Define the vertical line using a border property */
-                                /* #cccccc used with head container */
-
-}
-
-/* height: Controls the length of the vertical line.
-border-left: Creates the vertical line by applying a border to the left side of the div element.
-display: inline-block;     : Ensures the element can be positioned within text flow if desired
-*/
-/* Vertical Rule Test with css */
-
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* Vertical Line Test2 with css .vertical-line */
-.vertical-line2 {
-height: 100%;   /* Set the line's length */
-border-left: 5px solid #02075D; /* Define the vertical line using a border property */
-                                /* #cccccc used with head container */
-
-/*
-Common Dark Navy Blue Hex Codes:
-#000080: The widely recognized standard for Navy Blue.
-#02075D: A very deep, almost black-blue.
-#0B0B45: Another deep, saturated dark blue option.
-#000083: A dark blue with a slightly higher blue value than pure #000080.
-Understanding the Codes:
-Hex codes: (like #RRGGBB) define colors for digital screens, with RR, GG, and BB representing Red, Green, and Blue values from 00 (none) to FF (full).
-Dark navy: uses very little red and green, focusing mostly on blue to create depth.
-You can choose a hex code like #000080 for classic navy or explore variations like #02075D for a richer, deeper tone in your digital designs.
-*/
-
-/* border-left to left side of screen. border-right to right side */
-                 /* Optional: Adjust spacing or display properties */
-margin: 0 0;     /* Adds space to the left and right. Left# to the top? Right # to the right?  */
-/* Increase in right number moves bar to the right! */
-display: inline-block;     /* Allows the line to sit inline with other elements */
-padding: 1px 1px 1px 1px;  /* 10px top, 0px right, 10px bottom, 0px left */
-/*  left moves paragraph text on roight side to leftwards! left moves paragraph text rightwards! */
-
-}
-
-/* height: Controls the length of the vertical line.
-border-left: Creates the vertical line by applying a border to the left side of the div element.
-display: inline-block;     : Ensures the element can be positioned within text flow if desired
-*/
-/* Vertical Rule Test with css */
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* Vertical Line Test3 with css .vertical-line */
-.vertical-line3 {
-height: 100%;   /* Set the line's length */
-border-left: 5px solid #0B0B45; /* Define the vertical line using a border property */
-                                /* #cccccc used with head container */
-
-/*
-Common Dark Navy Blue Hex Codes:
-#000080: The widely recognized standard for Navy Blue.
-#02075D: A very deep, almost black-blue.
-#0B0B45: Another deep, saturated dark blue option.
-#000083: A dark blue with a slightly higher blue value than pure #000080.
-Understanding the Codes:
-Hex codes: (like #RRGGBB) define colors for digital screens, with RR, GG, and BB representing Red, Green, and Blue values from 00 (none) to FF (full).
-Dark navy: uses very little red and green, focusing mostly on blue to create depth.
-You can choose a hex code like #000080 for classic navy or explore variations like #02075D for a richer, deeper tone in your digital designs.
-*/
-
-/* border-left to left side of screen. border-right to right side */
-                 /* Optional: Adjust spacing or display properties */
-margin: 0 0;     /* Adds space to the left and right. Left# to the top? Right # to the right?  */
-/* Increase in right number moves bar to the right! */
-display: inline-block;     /* Allows the line to sit inline with other elements */
-padding: 1px 1px 1px 1px;  /* 10px top, 0px right, 10px bottom, 0px left */
-/*  left moves paragraph text on roight side to leftwards! left moves paragraph text rightwards! */
-
-}
-
-/* height: Controls the length of the vertical line.
-border-left: Creates the vertical line by applying a border to the left side of the div element.
-display: inline-block;     : Ensures the element can be positioned within text flow if desired
-*/
-/* Vertical Rule Test with css */
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* Vertical Line Test4 with css .vertical-line */
-.vertical-line4 {
-height: 100%;   /* Set the line's length */
-border-left: 5px solid #000083; /* Define the vertical line using a border property */
-                                /* #cccccc used with head container */
-
-/*
-Common Dark Navy Blue Hex Codes:
-#000080: The widely recognized standard for Navy Blue.
-#02075D: A very deep, almost black-blue.
-#0B0B45: Another deep, saturated dark blue option.
-#000083: A dark blue with a slightly higher blue value than pure #000080.
-Understanding the Codes:
-Hex codes: (like #RRGGBB) define colors for digital screens, with RR, GG, and BB representing Red, Green, and Blue values from 00 (none) to FF (full).
-Dark navy: uses very little red and green, focusing mostly on blue to create depth.
-You can choose a hex code like #000080 for classic navy or explore variations like #02075D for a richer, deeper tone in your digital designs.
-*/
-
-/* border-left to left side of screen. border-right to right side */
-                 /* Optional: Adjust spacing or display properties */
-margin: 0 0;     /* Adds space to the left and right. Left# to the top? Right # to the right?  */
-/* Increase in right number moves bar to the right! */
-display: inline-block;     /* Allows the line to sit inline with other elements */
-padding: 1px 1px 1px 1px;  /* 10px top, 0px right, 10px bottom, 0px left */
-/*  left moves paragraph text on roight side to leftwards! left moves paragraph text rightwards! */
-
-}
-
-/* height: Controls the length of the vertical line.
-border-left: Creates the vertical line by applying a border to the left side of the div element.
-display: inline-block;     : Ensures the element can be positioned within text flow if desired
-*/
-/* Vertical Rule Test with css */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-
-
-/* ------------------------------------------------ */
-/* Evidence Related css-styling. */
-/* ------------------------------------------------ */
-
-/* Used With Official Work Position Title in Table */
-.tenaflypositionnonboldsize {  font-size: .9rem;
-  font-weight: 400; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR="#000066";
-}
-/* Above Replace With Work Position Title in Table. Better tag title */
-.workpositionnonboldsize {  font-size: .9rem;
-  font-weight: 400; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR="#000066";
-}
-/*  text-shadow: 0px 0px 0px rgba(0,0,0,0.6); */
-/*  Text-Decoration: underline; */
-/* Usage? */
-.evidencelinkfont {
-FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif; COLOR: #ffffff;
-}
-/* ----------------------- */
-
 
 /* Begin Tags for John Doe's & Evidence Link Date Pages */
 /* from liveworkstudio.com/case/helping-a-sportswear-giant-become-customer-obsessed/" class="read-more"> */
@@ -1754,9 +1332,8 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Se
 }
 
 .case-tags {
-  margin-bottom: 2px; /* Was 16px. Changed on 2/16/26 to 2px to reduce space below bottom of box below link */ 
+  margin-bottom: 16px;
 }
-
 
 /* Gray colors under B&W: FFFFFF (white)/ E6E6E6/ DADADA/ CDCDCD/ C1C1C1/ B4B4B4/ A7A7A7/ 9A9A9A/ 8E8E8E/ 818181
 /* Darker Grays under B&W: 737373/ 666666/ 595959/ 4B4B4B/ 3D3D3D/ 303030/ 212121/ 131313/ 050505/ 000000 (Black) */
@@ -1770,14 +1347,11 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Se
   FONT-FAMILY: Arial, Helvetica, Sans Serif; /* Added by me on 011426  */
   display: inline-block;
   border: 2px solid #DADADA;
-  align: left;
-  padding: 2px 8px; /* 2nd number is Left & Right padding */
+  padding: 2px 8px;
   margin: 2px;
-  /*  */
   font-size: .9rem;
-  /* bold no work  */
-  font-weight: 700;  /* ToDo: 300-600= No Affect. 700 Has an effect Try on Current Browser 900 works */
-  border-radius: 6px;
+  font-weight: 700;      /* ToDo: 300-600= No Affect. 700 Has an effect Try on Current Browser */
+  border-radius: 24px;
   background: #99ffcc;
   
 }
@@ -1793,7 +1367,6 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Se
   border-radius: 24px;
   background: #fff;
 }
-
 
 /* Removed background-color: #f3a9c0; Stays the same as span above=99ffcc */
 .case-tags span:hover {
@@ -1840,69 +1413,6 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Se
   flex-direction: column;
 }
 
-
-/* ------------------------------------------------- */
-/* Legislation Related css-styling. legislation.html */
-/* Also used with aroundtheworld.html */
-/* ------------------------------------------------- */
-
-
-/* Legislation Paragraphs */
-.leg-paragraph-left {
-text-align: left;
-text-align: justify;
-}
-.leg-paragraph-center {
-text-align: center;
-
-}
-/* Legislation Paragraph */
-
-
-/* Legislation Call To Action Box Paragraph with Drop Shadow Outline */
-#outer-block-with-shadow3 {
-border: 1px solid #2f6f3e;
-row-gap: 1.6em;
-display: grid;
-column-gap: 2em;
-}
-.green-shadow-box {
-    background: #ffffff; 
-    border-radius: 0;
-    padding: 24px 28px;
-    box-shadow: 3px 3px 0 #f5e4ec, 6px 6px 0 #E9A7D6;
-    border: 1px solid #dbeee2;
-}
-/* Legislation Call To Action Box Paragraph with Drop Shadow Outline */
-
-
-
-/* Legislative Links */
-/* Link used in legislative */ /* No margin or padding */
-.legislative-link {
-  margin-bottom: 2px; /* Was 16px. Changed on 2/16/26 to 2px to reduce space below bottom of box below link */ 
-}
-
-.legislative-link span {
- FONT-FAMILY: Arial, Helvetica, Sans Serif; /* Added by me on 011426  */
-  display: inline-block;
-  border: 2px solid #DADADA;
-  justify: left;
-  align: left;
-  align-items: center;
-  text-align: center;
-  padding: 2px 8px; /* first number expands top&bottom. 2nd number expands left&right */
-  margin: 0px;
-  /*  */
-  font-size: .9rem;
-  /* bold no work  */
-  font-weight: 700;  /* ToDo: 300-600= No Affect. 700 Has an effect Try on Current Browser 900 works */
-  border-radius: 6px;
-  background: #99ffcc;
-}
-/* Legislative Links */
-
-
 /*   display: inline-block; */
 .ruleseparatoronjohndoepg {
 
@@ -1915,22 +1425,6 @@ column-gap: 2em;
   line-height: 10px;
 /*  line-height: 120%;  */
 }
-
-/* Reference Heading Of Legislative Link in STORY Paragraph */
-
-/* begin inline link menu */
-DIV#leg-link-heading span {
-	PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-BOTTOM: 2px; PADDING-TOP: 4px; MARGIN: 0px auto; POSITION: relative; TEXT-ALIGN: center;
-}
-/* Removed/Changed: LETTER-SPACING: 0.1em; */
-DIV#leg-link-heading span {
-	DISPLAY: inline; FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana, Helvetica; LIST-STYLE-TYPE: none; LETTER-SPACING: 1px; BACKGROUND-COLOR: #f5e4ec;
-}
-/* end inline link menu */
-/* Reference Heading Of Legislative Link in STORY Paragraph */
-
-
-
 
 
 .midframelink {
@@ -2061,6 +1555,15 @@ COLOR="#000066";
 }
 
 
+/* Used With Official Work Position Title in Table */
+.tenaflypositionnonboldsize {  font-size: .9rem;
+  font-weight: 400; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR="#000066";
+}
+/* Above Replace With Work Position Title in Table. Better tag title */
+.workpositionnonboldsize {  font-size: .9rem;
+  font-weight: 400; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR="#000066";
+}
+/* ----------------------- */
 
 
 /* Used for Our Analysis header 990000 or current */
@@ -2096,8 +1599,6 @@ COLOR="#000099";
 .obitraisedtype {FONT-SIZE: 23px; Vertical ALign: super; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #000000; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 }
 
-
-
 /* Used with eleanoroftenafly.com */
 /* Font for Bottom of homepage URL #CC3366 */
 /* #CC3366 */
@@ -2110,25 +1611,11 @@ COLOR="#000099";
 .homepgcopyright {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none; text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 }
 
-
-
-/* Asterisk Separator As Font for Ornamentation */
-/* Removed text-shadow: 2px 2px 2px rgba(0,0,0,0.6); */
-/* Color from logo is FF99FF Color from pink background is f5e4ec */
-/* Used with indexsingleasteriskruletest.html */
-/* Used with font tag */
-.asteriskornament1 {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #CC3366; Text-Decoration: none;
+/*  text-shadow: 0px 0px 0px rgba(0,0,0,0.6); */
+/*  Text-Decoration: underline; */
+.evidencelinkfont {
+FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Verdana,Arial,Helvetica,Sans Serif; COLOR: #ffffff;
 }
-.asteriskornament2 {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF99FF; Text-Decoration: none;
-}
-.asteriskornament3 {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #99ffcc; Text-Decoration: none;
-}
-
-/* Used with indexsingleasteriskruletest.html */
-/* Used with span tag  */
-.asteriskornament101 {FONT-SIZE: 23px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF99FF; Text-Decoration: none;
-}
-
 
 /* COLOR: #669900; */
 #evidencelink A {
@@ -2162,15 +1649,6 @@ FONT-SIZE: 12px; FONT-WEIGHT: BOLD; FONT-FAMILY: Arial, Helvetica, Sans Serif;  
 /* Note below homepgparatop */
 .notebelowcalltoaction {FONT-SIZE: 16px; FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #000033; Text-Decoration: none;
 }
-
-
-
-
-
-
-
-
-
 
 /* Removed= FONT-SIZE: 13px;  Text-Decoration: underline; */
 .homelandtest {FONT-WEIGHT: Bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif; COLOR: #FF0000; Text-Decoration: underline;
@@ -2230,6 +1708,13 @@ COLOR: #000000;
 .2ndtablefillbelowlogoandnav {width: 100%; max-width: 100%;  
 }
 
+/* Used with Eleanor Of Tenafly website */
+/* border: 1px solid #000000 */
+.1stboxtablecontent {padding: 10px; width: 100%; max-width: 100%; border: 1px solid #000000;
+}
+.purposetable {padding: 10px; width: 100%; max-width: 100%;  
+}
+
 
 /* Not used on evidence-10-04-2023.html */
 /* Check other pages ToDo */
@@ -2246,29 +1731,10 @@ COLOR: #000000;
 .evidencedatetableinner {padding: 10px; width: 100%; max-width: 100%; border: 0px solid #000033; background-color: #ffffff;
 }
 
-/*           */ /* or 000033 */
+/*           */
+/* or 000033 */
 .evidencedatetableinner061623 {padding: 10px; width: 100%; max-width: 100%; border: 0px solid #000033; background-color: #999999;
 }
-
-/* Used with Eleanor Of Tenafly website */
-/* border: 1px solid #000000 */
-.1stboxtablecontent {padding: 10px; width: 100%; max-width: 100%; border: 1px solid #000000;
-}
-
-/* For Story on JohnDoe1.html etc */
-.purposetable {
-padding: 10px;
-width: 100%;
-max-width: 100%;
-
-
-
-}
-/* For Story */
-
-
-
-
 .pgcontainer img,
 .evidencedatetablecontainer img,
 .evidencedatetableinner img {
@@ -2342,7 +1808,7 @@ max-width: 100%;
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
-	padding-bottom: 5px; /* was 2 rem Which Was too much footer */
+	padding-bottom: 2rem;
 }
 /* By me on 012226 */
 .footer-full-bleed-for-copyright {
@@ -2361,37 +1827,6 @@ max-width: 100%;
 }
 
 
-/* ToDo-021126 */
-.call-to-action-box-within-tab-le {
-align-items: center; /* No work to center td cell with shadow box */
-text-align: center; /* No work to center td cell with shadow box */
-/* background: #A7A7A7; */
-width: 100%;
-    /* height: 100%; */
-    /* position: relative; */
-}
-/* ToDo-021126 */
-.call-to-action-box-within-row {
-
-/& background: #A7A7A7; */
-width: 100%;
-    /* height: 100%; */
-    /* position: relative; */
-}
-/* ToDo-021126 */
-.call-to-action-box-within-tdcell {
-	/* justify-content: center; */
-	/* text-align: center; */
-/* background: #A7A7A7; */
-
-/* Removed! Caused td cell to center! Was width: 100%; */
- /* height: 100%; */
-/* position: relative; */
-}
-
-
-
-
 /* Used with Tenafly Links */
 .tenaflyhoverlink {
 	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Sans Serif; font-weight=bold; COLOR: #003300
@@ -2408,8 +1843,13 @@ COLOR="#000000";
 .servicesgrayAVHSbold12 {FONT-SIZE: 12px; FONT-WEIGHT: bold; FONT-FAMILY: Arial,Verdana,Helvetica,Sans Serif;
 COLOR="#000000";
 }
+
+
 /* Photo hidden text */
-/* TD.textpghideCCCCCC {FONT-SIZE: 1px; COLOR: #CCCCCC; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif} */
+/* TD.textpghideCCCCCC {
+	FONT-SIZE: 1px; COLOR: #CCCCCC; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+*/
 
 /* Media with test from codepen */
 
