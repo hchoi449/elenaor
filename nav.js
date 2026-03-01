@@ -91,7 +91,22 @@ if (hamburger) {
   hamburger.addEventListener('click', toggleMenu);
 }
 links.forEach((link) => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    const parentItem = link.closest('.has-sub');
+    const isDirectParentLink =
+      !!parentItem &&
+      parentItem.querySelector(':scope > a') === link &&
+      !!parentItem.querySelector(':scope > .nav-sub');
+
+    // On mobile, tapping a parent nav item should expand its submenu instead of closing the whole panel.
+    if (isDirectParentLink && mobileMedia.matches && navLinks && navLinks.classList.contains('active')) {
+      e.preventDefault();
+      const willOpen = !parentItem.classList.contains('mobile-open');
+      parentItem.classList.toggle('mobile-open', willOpen);
+      setMobileSubState(parentItem, willOpen);
+      return;
+    }
+
     const justOpened = Date.now() - menuOpenedAt < 350;
     if (navLinks && navLinks.classList.contains('active') && !justOpened) {
       toggleMenu();
