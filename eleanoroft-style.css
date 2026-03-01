@@ -145,7 +145,7 @@ height=site-footer;
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	max-height: 100px;
-	overflow: hidden;
+	overflow: visible;
 }
 .site-nav .nav-inner {
 	display: flex;

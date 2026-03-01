@@ -1,0 +1,134 @@
+/* blocktestfromflintbeat.css  Test style sheet for eleanoroftenafly.com */
+/* Used with */
+/* homepage of eleanoroftenafly.com */
+/*  */
+
+/*  */
+.spacer-fill-between-main-content {
+	display: flex;
+	align-items: center;
+		position: relative;
+}
+
+/* .outer-block-with-shadow1 { */
+/*
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background: #737373;
+color: #000033;
+border: 2px solid #999999;
+*/
+
+.outer-block-with-shadow2 {
+    border: 3px solid var(--as-clr_primary-dark);
+    box-shadow: 3px 3px white, 6px 6px var(--as-clr_primary-light);
+    row-gap: 1.6em;
+    display: grid;
+    column-gap: 2em;
+    padding: 1em;
+}
+
+
+.block-call-to-action1 {
+	/*  */
+	height: 20px; /* Taller/wider for emphasis */
+	width: auto;
+	display: block;
+		position: relative;
+}
+
+/* begin inline link menu */
+DIV#outer-block-with-shadow3 {
+	position: relative;
+background: #f5e4ec;
+    border: 1px solid;
+    box-shadow: 1px 1px, 4px 4px blue;
+    row-gap: 1.6em;
+    display: grid;
+    column-gap: 2em;
+    padding: 1em;
+}
+
+
+
+/* 1ST FOOTER TEST CONTAINER */
+/* Flex Container for Bottom of Home Page */
+/* For Icon Copyright Icon row */
+
+.icon-c-icon-flex-container1 {
+display: flex;
+justify-content: space-around; /* */ /* ??? */
+border: 2px solid black; /* was #ccc */
+padding: 1px;
+}
+
+.icon-flex-item1 {
+background-color: #4CAF50;
+color: white; /* For Text Font Color */
+padding: 20px;
+margin: 10px;
+text-align: center;
+flex: 1;
+}
+.copyright1-flex-item {
+background-color: #4CAF50;
+color: white;
+padding: 20px;
+margin: 10px;
+text-align: center;
+vertical-align: middle;
+flex: 1;
+}
+.icon-flex-item2 {
+background-color: #4CAF50;
+color: white; /* For Text Font Color */
+padding: 20px;
+margin: 10px;
+text-align: center;
+flex: 1;
+}
+/* */
+
+
+
+/* PREFERRED FOOTER CONTAINER */
+/* ??? align-items: center; ??? How work??? */
+
+.icon-c-icon-flex-container2 {
+display: flex; 
+justify-content: center;  /* Was justify-content: space-around; */ /* ??? */
+align items: center;
+border: 2px solid black;  /* was #ccc */
+padding: 1px;
+}
+
+/* Favicon Left and Right Alignment Test */
+.icon-flex-item-left {
+background-color: #000033;
+color: white; /* For Text Font Color */
+padding: 2px;
+margin: 10px;
+text-align: left;
+flex: 1;
+}
+.copyright2-flex-item {
+background-color: #000033;
+color: white;
+padding: 2px;
+margin: 10px;
+text-align: center; /* */
+vertical-align: middle; /* No work at home */
+/* ? position: relative; ? position: auto; ? */
+justify-content: center;
+flex: 1; /*   */
+}
+.icon-flex-item-right {
+background-color: #000033;
+color: white; /* For Text Font Color */
+padding: 2px;
+margin: 10px;
+text-align: right; 
+flex: 1;
+}
+/* */
